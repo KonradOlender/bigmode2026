@@ -6,7 +6,8 @@
   "inputs": [
     "D:\\UnityProjects\\Bigmode2026-git\\bigmode2026\\My project\\Packages\\manifest.json",
     "D:\\UnityProjects\\Bigmode2026-git\\bigmode2026\\My project\\Packages\\packages-lock.json",
-    "C:\\Program Files\\Unity\\Hub\\Editor\\6000.3.6f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1"
+    "C:\\Program Files\\Unity\\Hub\\Editor\\6000.3.6f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1",
+    "D:\\UnityProjects\\Bigmode2026-git\\bigmode2026\\My project\\Packages\\com.bezi.sidekick\\package.json"
   ],
   "outputs": {
     "com.unity.ai.navigation@2.0.9": {
@@ -389,6 +390,25 @@
       "resolvedPath": "D:\\UnityProjects\\Bigmode2026-git\\bigmode2026\\My project\\Library\\PackageCache\\com.unity.modules.xr",
       "version": "1.0.0",
       "source": "builtin",
+      "testable": false
+    },
+    "com.bezi.sidekick@file:D:\\UnityProjects\\Bigmode2026-git\\bigmode2026\\My project\\Packages\\com.bezi.sidekick": {
+      "name": "com.bezi.sidekick",
+      "displayName": "Bezi Plugin",
+      "resolvedPath": "D:\\UnityProjects\\Bigmode2026-git\\bigmode2026\\My project\\Packages\\com.bezi.sidekick",
+      "editorCompatibility": "2018.3.0a1",
+      "version": "0.75.2",
+      "source": "embedded",
+      "testable": true
+    },
+    "com.unity.nuget.newtonsoft-json@3.2.2": {
+      "name": "com.unity.nuget.newtonsoft-json",
+      "displayName": "Newtonsoft Json",
+      "resolvedPath": "D:\\UnityProjects\\Bigmode2026-git\\bigmode2026\\My project\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json@4dfd81071c64",
+      "fingerprint": "4dfd81071c6475bb9c114f920bfb4e3fc5e28c6a",
+      "editorCompatibility": "2018.4.0a1",
+      "version": "3.2.2",
+      "source": "registry",
       "testable": false
     },
     "com.unity.modules.subsystems@1.0.0": {
