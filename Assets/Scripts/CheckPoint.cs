@@ -1,9 +1,13 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
     public Gamemanager gamemanager;
+    public bool isStop;
+
     public float timeGain = 15;
+    public List<ParticleSystem> particles;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,7 +24,27 @@ public class CheckPoint : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            gamemanager.AddTime(timeGain);
+            if (isStop)
+            {
+                Stop();
+            }
+            else
+            {
+                Checkpoint();
+            }
         }
+    }
+
+    private void Checkpoint()
+    {
+        gamemanager.AddTime(timeGain);
+        foreach (var part in particles)
+        {
+            part.Play();
+        }
+    }
+    private void Stop()
+    {
+        gamemanager.Win();
     }
 }

@@ -8,14 +8,21 @@ public class BallCharacter : MonoBehaviour
     [SerializeField] private float moveForce = 10f;
     [SerializeField] private float maxSpeed = 15f;
     [SerializeField] private float jumpForce = 8f;
+    [SerializeField] private bool playerInControl = true;
     
     [Header("Camera Reference")]
     [SerializeField] private Transform cameraTransform;
+    [SerializeField] private Camera camera;
+    [SerializeField] float minFOV;
+    [SerializeField] float maxFOV;
     
     [Header("Ground Detection")]
     [SerializeField] private float groundCheckDistance = 0.6f;
     [SerializeField] private LayerMask groundLayer;
-    
+
+    [Header("Reset")]
+    [SerializeField] private Transform resetPosition;
+
     private Rigidbody rb;
     private Vector2 moveInput;
     private bool isGrounded;
@@ -23,10 +30,18 @@ public class BallCharacter : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        
+
+        playerInControl = true;
+
+
         if (cameraTransform == null)
         {
             cameraTransform = Camera.main.transform;
+        }
+
+        if (camera == null)
+        {
+            camera = Camera.main;
         }
     }
     
@@ -52,10 +67,20 @@ public class BallCharacter : MonoBehaviour
         cameraRight.y = 0f;
         cameraForward.Normalize();
         cameraRight.Normalize();
+
+        Debug.Log(rb.linearVelocity.magnitude);
+        //Debug.Log(rb.linearVelocity);
+
+        Vector3 moveDirection = cameraRight * moveInput.x;
+        //cameraForward * moveInput.y +
+
+        if(camera.fieldOfView >= minFOV && camera.fieldOfView < maxFOV)
+        {
+            camera.fieldOfView = 60 + rb.linearVelocity.magnitude;
+        }
         
-        Vector3 moveDirection = cameraForward * moveInput.y + cameraRight * moveInput.x;
-        
-        if (rb.linearVelocity.magnitude < maxSpeed)
+
+        if (rb.linearVelocity.magnitude < maxSpeed && playerInControl)
         {
             rb.AddForce(moveDirection * moveForce, ForceMode.Force);
         }
@@ -72,5 +97,16 @@ public class BallCharacter : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
+    }
+
+    public void OnReset(InputAction.CallbackContext context)
+    {
+        transform.position = resetPosition.position;
+        rb.linearVelocity = new Vector3(0, 0, 0);
+    }
+
+    public void setPlayerInControl(bool value)
+    {
+        playerInControl = value;
     }
 }
