@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody))]
 public class BallCharacter : MonoBehaviour
 {
+    public Gamemanager gamemanager;
     [Header("Movement Settings")]
     [SerializeField] private float moveForce = 10f;
     [SerializeField] private float maxSpeed = 15f;
@@ -68,19 +69,20 @@ public class BallCharacter : MonoBehaviour
         cameraForward.Normalize();
         cameraRight.Normalize();
 
-        Debug.Log(rb.linearVelocity.magnitude);
+        gamemanager.setSpeedText(rb.linearVelocity.magnitude);
+        //Debug.Log(rb.linearVelocity.magnitude);
         //Debug.Log(rb.linearVelocity);
 
         Vector3 moveDirection = cameraRight * moveInput.x;
         //cameraForward * moveInput.y +
 
-        if(camera.fieldOfView >= minFOV && camera.fieldOfView < maxFOV)
+        if(camera.fieldOfView >= minFOV && camera.fieldOfView <= maxFOV)
         {
             camera.fieldOfView = 60 + rb.linearVelocity.magnitude;
         }
         
 
-        if (rb.linearVelocity.magnitude < maxSpeed && playerInControl)
+        if (rb.linearVelocity.magnitude < maxSpeed && playerInControl && isGrounded)
         {
             rb.AddForce(moveDirection * moveForce, ForceMode.Force);
         }

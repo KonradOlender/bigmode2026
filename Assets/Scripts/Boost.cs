@@ -4,7 +4,8 @@ public class Boost : MonoBehaviour
 {
     public Gamemanager gamemanager;
     public string triggerTag = "Player";
-    public float timeGain = 15;
+    public Rigidbody playerRB;
+    public float boostForce = 15;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,9 +20,9 @@ public class Boost : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "triggerTag")
+        if(other.tag == triggerTag)
         {
-            gamemanager.AddTime(timeGain);
+            playerRB.AddForce(playerRB.linearVelocity.normalized * boostForce, ForceMode.Impulse);
         }
     }
 }

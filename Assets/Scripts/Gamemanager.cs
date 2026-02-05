@@ -17,6 +17,8 @@ public class Gamemanager : MonoBehaviour
     public GameObject uiElementWinScreen;
     public GameObject uiElementFailedScreen;
     public GameObject uiElementClock;
+    public GameObject uiElementSpeedomater;
+    public TMP_Text speedText;
 
 
     [Header("Events")]
@@ -28,6 +30,7 @@ public class Gamemanager : MonoBehaviour
     {
         uiElementWinScreen.SetActive(false);
         uiElementFailedScreen.SetActive(false);
+        uiElementSpeedomater.SetActive(true);
         currentTime = timeLimit;
         timerText.text = "00:00";
 
@@ -91,8 +94,9 @@ public class Gamemanager : MonoBehaviour
     public string GetFormattedTime()
     {
         int minutes = Mathf.FloorToInt(currentTime / 60f);
-        int seconds = Mathf.FloorToInt(currentTime % 60f);
-        return string.Format("{0:00}:{1:00}", minutes, seconds);
+        int seconds = Mathf.FloorToInt(currentTime);
+        int milliseconds = Mathf.FloorToInt((currentTime - seconds) * 1000);
+        return string.Format("{0:00}:{1:00}", seconds, milliseconds);
     }
 
     public void Win()
@@ -107,5 +111,10 @@ public class Gamemanager : MonoBehaviour
         Debug.Log("YouSuck!");
         uiElementClock.SetActive(false);
         uiElementFailedScreen.SetActive(true);
+    }
+
+    public void setSpeedText(float value)
+    {
+        speedText.text = value.ToString("F2");
     }
 }
