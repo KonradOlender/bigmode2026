@@ -4,8 +4,9 @@ public class Boost : MonoBehaviour
 {
     public Gamemanager gamemanager;
     public string triggerTag = "Player";
-    public Rigidbody playerRB;
     public float boostForce = 15;
+
+    private BallCharacter ball;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,7 +23,8 @@ public class Boost : MonoBehaviour
     {
         if(other.tag == triggerTag)
         {
-            playerRB.AddForce(playerRB.linearVelocity.normalized * boostForce, ForceMode.Impulse);
+            ball = other.GetComponent<BallCharacter>();
+            ball.AddBoost(boostForce);
         }
     }
 }

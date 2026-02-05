@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -24,10 +25,17 @@ public class BallCharacter : MonoBehaviour
     [Header("Reset")]
     [SerializeField] private Transform resetPosition;
 
+    [Header("Reset")]
+    [SerializeField] private Animator animator;
+    [SerializeField] public float isBoostingCooldown;
+
     private Rigidbody rb;
     private Vector2 moveInput;
     private bool isGrounded;
-    
+    private bool isBoosting;
+
+    private string currentAnim = "";
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -49,6 +57,7 @@ public class BallCharacter : MonoBehaviour
     private void FixedUpdate()
     {
         CheckGroundStatus();
+        Anims();
         ApplyMovement();
     }
     
@@ -110,5 +119,56 @@ public class BallCharacter : MonoBehaviour
     public void setPlayerInControl(bool value)
     {
         playerInControl = value;
+    }
+
+    public void Anims()
+    {
+        if (!isBoosting)
+        {
+            if (moveInput.x > 0)
+            {
+                //animator.SetBool("Reset", false);
+                //animator.SetBool("Left", false);
+                //animator.SetBool("Right", true);
+                ChangeAnimation("TurnRight");
+            }
+            else if (moveInput.x < 0)
+            {
+                //animator.SetBool("Reset", false);
+                //animator.SetBool("Right", false);
+                //animator.SetBool("Left", true);
+                ChangeAnimation("TurnLeft");
+            }
+            else
+            {
+                //animator.SetBool("Left", false);
+                //animator.SetBool("Right", false);
+                //animator.SetBool("Reset", true);
+                ChangeAnimation("Idle");
+            }
+        }
+    }
+
+    private void ChangeAnimation(string name)
+    {
+        if(currentAnim != name)
+        {
+            currentAnim = name;
+            animator.CrossFade(name, 0.2f);
+        }
+    }
+
+    public void AddBoost(float boostForce)
+    {
+        isBoosting = true;
+        rb.AddForce(rb.linearVelocity.normalized * boostForce, ForceMode.Impulse);
+        ChangeAnimation("Boots");
+        StartCoroutine(BoostingCooldown());
+    }
+
+    IEnumerator BoostingCooldown()
+    {
+        yield return new WaitForSeconds(isBoostingCooldown);
+        isBoosting = false;
     }
 }
