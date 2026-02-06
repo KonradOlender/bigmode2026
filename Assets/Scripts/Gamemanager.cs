@@ -1,12 +1,17 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class Gamemanager : MonoBehaviour
 {
+    public BallCharacter ball;
     [Header("Timer Settings")]
     [SerializeField] private float timeLimit = 60f;
-    [SerializeField] private bool startOnAwake = true;
+
+    [Header("GameState")]
+    public bool isPreGame = true;
 
     [Header("Timer State")]
     public float currentTime;
@@ -19,12 +24,26 @@ public class Gamemanager : MonoBehaviour
     public GameObject uiElementClock;
     public GameObject uiElementSpeedomater;
     public TMP_Text speedText;
+    public Slider pregameSlider;
+    public float sliderSpeed;
 
 
     [Header("Events")]
     public UnityEvent onTimerStart;
     public UnityEvent onTimerEnd;
     public UnityEvent<float> onTimerUpdate;
+
+    public UnityEvent<bool> onSetPlayerControll;
+
+    [Header("Launch")]
+    public float force_0_45;
+    public float force_45_65;
+    public float force_65_95;
+    public float force_95_100;
+
+
+    private bool sliderAdd = true;
+    private bool sliderSubtract = true;
 
     private void Start()
     {
@@ -34,17 +53,80 @@ public class Gamemanager : MonoBehaviour
         currentTime = timeLimit;
         timerText.text = "00:00";
 
-        if (startOnAwake)
-        {
-            StartTimer();
-        }
+        //if (startOnAwake)
+        //{
+        //    StartTimer();
+        //}
+        onSetPlayerControll?.Invoke(false);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (isTimerRunning)
         {
             UpdateTimer();
+        }
+        else if (isPreGame)
+        {
+            SliderHandle();
+        }
+    }
+
+    private void SliderHandle()
+    {
+        if (sliderAdd)
+        {
+            if(pregameSlider.value + sliderSpeed >= 1)
+            {
+                pregameSlider.value = 1;
+                sliderAdd = false;
+                sliderSubtract = true;
+            }
+            else
+            {
+                pregameSlider.value += sliderSpeed;
+            }
+        }
+        else if (sliderSubtract)
+        {
+            if (pregameSlider.value - sliderSpeed <= 0)
+            {
+                pregameSlider.value = 0;
+                sliderAdd = true;
+                sliderSubtract = false;
+            }
+            else
+            {
+                pregameSlider.value -= sliderSpeed;
+            }
+        }
+        
+    }
+
+    public void getCurrentSliderValue(InputAction.CallbackContext context)
+    {
+        float force = 0;
+        if (context.started)
+        {
+            if(pregameSlider.value >= 0  && pregameSlider.value < 0.45)
+            {
+                force = force_0_45;
+            }
+            else if (pregameSlider.value >= 0.45 && pregameSlider.value < 0.65)
+            {
+                force = force_45_65;
+            }
+            else if (pregameSlider.value >= 0.65 && pregameSlider.value < 0.95)
+            {
+                force = force_65_95;
+            }
+            else if (pregameSlider.value >= 0.95 && pregameSlider.value <= 100)
+            {
+                force = force_95_100;
+            }
+            ball.AddForcePreGame(force);
+            isPreGame = false;
+            StartTimer();
         }
     }
 
@@ -117,4 +199,6 @@ public class Gamemanager : MonoBehaviour
     {
         speedText.text = value.ToString("F2");
     }
+
+    
 }

@@ -121,6 +121,14 @@ public class BallCharacter : MonoBehaviour
         playerInControl = value;
     }
 
+    public void AddForcePreGame(float force)
+    {
+        isBoosting = true;
+        rb.AddForce(Vector3.back * force, ForceMode.Impulse);
+        ChangeAnimation("Boots");
+        StartCoroutine(BoostingCooldown());
+    }
+
     public void Anims()
     {
         if (!isBoosting)
