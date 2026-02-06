@@ -3,9 +3,11 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Gamemanager : MonoBehaviour
 {
+    public DataBase levelDataBase;
     public BallCharacter ball;
     [Header("Timer Settings")]
     [SerializeField] private float timeLimit = 60f;
@@ -23,9 +25,12 @@ public class Gamemanager : MonoBehaviour
     public GameObject uiElementFailedScreen;
     public GameObject uiElementClock;
     public GameObject uiElementSpeedomater;
+    public GameObject uimenu;
     public TMP_Text speedText;
     public Slider pregameSlider;
     public float sliderSpeed;
+
+    public TMP_Text topSpeedText;
 
 
     [Header("Events")]
@@ -34,6 +39,9 @@ public class Gamemanager : MonoBehaviour
     public UnityEvent<float> onTimerUpdate;
 
     public UnityEvent<bool> onSetPlayerControll;
+
+    [Header("Stats")]
+    public float topSpeed = 0;
 
     [Header("Launch")]
     public float force_0_45;
@@ -105,29 +113,37 @@ public class Gamemanager : MonoBehaviour
 
     public void getCurrentSliderValue(InputAction.CallbackContext context)
     {
-        float force = 0;
-        if (context.started)
+        if (isPreGame)
         {
-            if(pregameSlider.value >= 0  && pregameSlider.value < 0.45)
+            float force = 0;
+            if (context.started)
             {
-                force = force_0_45;
+                if (pregameSlider.value >= 0 && pregameSlider.value < 0.45)
+                {
+                    force = force_0_45;
+                }
+                else if (pregameSlider.value >= 0.45 && pregameSlider.value < 0.65)
+                {
+                    force = force_45_65;
+                }
+                else if (pregameSlider.value >= 0.65 && pregameSlider.value < 0.95)
+                {
+                    force = force_65_95;
+                }
+                else if (pregameSlider.value >= 0.95 && pregameSlider.value <= 100)
+                {
+                    force = force_95_100;
+                }
+                ball.AddForcePreGame(force);
+                isPreGame = false;
+                StartTimer();
             }
-            else if (pregameSlider.value >= 0.45 && pregameSlider.value < 0.65)
-            {
-                force = force_45_65;
-            }
-            else if (pregameSlider.value >= 0.65 && pregameSlider.value < 0.95)
-            {
-                force = force_65_95;
-            }
-            else if (pregameSlider.value >= 0.95 && pregameSlider.value <= 100)
-            {
-                force = force_95_100;
-            }
-            ball.AddForcePreGame(force);
-            isPreGame = false;
-            StartTimer();
         }
+    }
+
+    public void OpenConsole()
+    {
+        uimenu.SetActive(!uimenu.activeInHierarchy);
     }
 
     private void UpdateTimer()
@@ -167,10 +183,7 @@ public class Gamemanager : MonoBehaviour
 
     public void AddTime(float additionalTime)
     {
-        Debug.Log("AddTie");
-        Debug.Log(currentTime);
         currentTime += additionalTime;
-        Debug.Log(currentTime);
     }
 
     public string GetFormattedTime()
@@ -183,21 +196,40 @@ public class Gamemanager : MonoBehaviour
 
     public void Win()
     {
-        Debug.Log("Win");
         StopTimer();
+        topSpeedText.text = topSpeedText.text + topSpeed.ToString("F2");
         uiElementClock.SetActive(false);
         uiElementWinScreen.SetActive(true);
     }
+
+    public void EndLevelBack()
+    {
+        levelDataBase.SetLevelData("S", 23.3f, 12);
+        SceneManager.LoadScene(0);
+    }
+    public void EndLevelNext(int levelIndex)
+    {
+        levelDataBase.SetLevelData("S", 23.3f, 12);
+        SceneManager.LoadScene(levelIndex);
+    }
     public void Failed()
     {
-        Debug.Log("YouSuck!");
         uiElementClock.SetActive(false);
         uiElementFailedScreen.SetActive(true);
     }
 
     public void setSpeedText(float value)
     {
+        if(topSpeed < value)
+        {
+            topSpeed = value;
+        }
         speedText.text = value.ToString("F2");
+    }
+
+    public void LoadScene(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
     }
 
     
