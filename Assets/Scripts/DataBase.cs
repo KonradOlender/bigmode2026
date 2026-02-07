@@ -27,7 +27,10 @@ public class DataBase : ScriptableObject
     {
         compleated = compleatedV;
         rank = rankV;
-        timeLeft = timeLeftV;
+        if(timeLeft < timeLeftV)
+        {
+            timeLeft = timeLeftV;
+        }
         if(topSpeed < topSpeedV)
         {
             topSpeed = topSpeedV;

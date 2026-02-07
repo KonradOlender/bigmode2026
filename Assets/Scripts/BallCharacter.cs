@@ -31,7 +31,8 @@ public class BallCharacter : MonoBehaviour
 
     private Rigidbody rb;
     private Vector2 moveInput;
-    private bool isGrounded;
+    private bool isGrounded = false;
+    private bool wasGrounded = false;
     private bool isBoosting;
 
     private string currentAnim = "";
@@ -53,19 +54,52 @@ public class BallCharacter : MonoBehaviour
             camera = Camera.main;
         }
     }
-    
+    private void Update()
+    {
+        if (!gamemanager.isPreGame)
+        {
+            CheckGroundStatus();
+        }
+    }
     private void FixedUpdate()
     {
-        CheckGroundStatus();
         Anims();
         ApplyMovement();
     }
     
     private void CheckGroundStatus()
     {
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance, groundLayer);
+        //isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance, groundLayer);
+
+        wasGrounded = isGrounded;
+
+        isGrounded = Physics.Raycast(
+            transform.position,
+            Vector3.down,
+            groundCheckDistance,
+            groundLayer
+        );
+
+        if (isGrounded != wasGrounded)
+        {
+            OnGroundedChanged(isGrounded);
+        }
     }
-    
+
+    public void OnGroundedChanged(bool grounded)
+    {
+        if (grounded)
+        {
+            Soundmanager.Instance.RideSoundPlay();
+        }
+        else if (!grounded)
+        {
+            Soundmanager.Instance.RideEndPlay();
+            Soundmanager.Instance.RideSoundStop();
+        }
+    }
+
+
     private void ApplyMovement()
     {
         if (cameraTransform == null) return;

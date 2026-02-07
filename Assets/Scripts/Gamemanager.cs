@@ -14,6 +14,7 @@ public class Gamemanager : MonoBehaviour
 
     [Header("GameState")]
     public bool isPreGame = true;
+    public bool isFiled = false;
 
     [Header("Timer State")]
     public float currentTime;
@@ -58,6 +59,8 @@ public class Gamemanager : MonoBehaviour
 
     private void Start()
     {
+        Soundmanager.Instance.RideSoundStop();
+
         uiElementWinScreen.SetActive(false);
         uiElementFailedScreen.SetActive(false);
         uiElementSpeedomater.SetActive(true);
@@ -200,25 +203,32 @@ public class Gamemanager : MonoBehaviour
 
     public void Win()
     {
-        StopTimer();
-        topSpeedText.text = topSpeedText.text + topSpeed.ToString("F2");
-        timeLeftText.text = timeLeftText.text + GetFormattedTime();
-        uiElementClock.SetActive(false);
-        uiElementWinScreen.SetActive(true);
+        if (!isFiled)
+        {
+            StopTimer();
+            topSpeedText.text = topSpeedText.text + topSpeed.ToString("F2");
+            timeLeftText.text = timeLeftText.text + GetFormattedTime();
+            uiElementClock.SetActive(false);
+            uiElementWinScreen.SetActive(true);
+        }
+        
     }
 
     public void EndLevelBack()
     {
+        Soundmanager.Instance.RideSoundStop();
         levelDataBase.SetLevelData(true, "S", currentTime, topSpeed, 0);
         SceneManager.LoadScene(0);
     }
     public void EndLevelNext(int levelIndex)
     {
+        Soundmanager.Instance.RideSoundStop();
         levelDataBase.SetLevelData(true, "S", currentTime, topSpeed, 0);
         SceneManager.LoadScene(levelIndex);
     }
     public void Failed()
     {
+        isFiled = true;
         uiElementClock.SetActive(false);
         uiElementFailedScreen.SetActive(true);
     }

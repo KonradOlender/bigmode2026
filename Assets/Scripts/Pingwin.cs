@@ -9,13 +9,13 @@ public class Pingwin : MonoBehaviour
     public float boostForce = 3;
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.linearVelocity = Vector3.forward * speed;
+        //rb.linearVelocity = Vector3.forward * speed;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,6 +23,8 @@ public class Pingwin : MonoBehaviour
         if (other.tag == "Player")
         {
             playerRB.AddForce((playerRB.linearVelocity.normalized * -1) * boostForce, ForceMode.Impulse);
+            Debug.Log("Hit");
+            Destroy(this.gameObject);
         }
     }
 }
