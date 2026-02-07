@@ -23,6 +23,7 @@ public class Boost : MonoBehaviour
     {
         if(other.tag == triggerTag)
         {
+            Soundmanager.Instance.BoostPlay();
             ball = other.GetComponent<BallCharacter>();
             ball.AddBoost(boostForce);
         }

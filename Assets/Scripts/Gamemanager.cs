@@ -205,6 +205,7 @@ public class Gamemanager : MonoBehaviour
     {
         if (!isFiled)
         {
+            Soundmanager.Instance.metaPlay();
             StopTimer();
             topSpeedText.text = topSpeedText.text + topSpeed.ToString("F2");
             timeLeftText.text = timeLeftText.text + GetFormattedTime();
@@ -228,6 +229,7 @@ public class Gamemanager : MonoBehaviour
     }
     public void Failed()
     {
+        Soundmanager.Instance.LosePlay();
         isFiled = true;
         uiElementClock.SetActive(false);
         uiElementFailedScreen.SetActive(true);
