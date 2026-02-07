@@ -30,6 +30,8 @@ public class Gamemanager : MonoBehaviour
     public Slider pregameSlider;
     public float sliderSpeed;
 
+    [Header("Stats")]
+    public TMP_Text timeLeftText;
     public TMP_Text topSpeedText;
 
 
@@ -198,18 +200,19 @@ public class Gamemanager : MonoBehaviour
     {
         StopTimer();
         topSpeedText.text = topSpeedText.text + topSpeed.ToString("F2");
+        timeLeftText.text = timeLeftText.text + GetFormattedTime();
         uiElementClock.SetActive(false);
         uiElementWinScreen.SetActive(true);
     }
 
     public void EndLevelBack()
     {
-        levelDataBase.SetLevelData("S", 23.3f, 12);
+        levelDataBase.SetLevelData(true, "S", currentTime, topSpeed, 0);
         SceneManager.LoadScene(0);
     }
     public void EndLevelNext(int levelIndex)
     {
-        levelDataBase.SetLevelData("S", 23.3f, 12);
+        levelDataBase.SetLevelData(true, "S", currentTime, topSpeed, 0);
         SceneManager.LoadScene(levelIndex);
     }
     public void Failed()

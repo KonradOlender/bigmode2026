@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e7ad43a0d80654d8d1898afd45a60c, type: 3}
   m_Name: DataBaseLevel1
   m_EditorClassIdentifier: Assembly-CSharp::DataBase
+  resetOnStart: 1
+  compleated: 1
+  rank: S
+  timeLeft: 294.8311
+  topSpeed: 23.64956
+  pingwinKills: 0

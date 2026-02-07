@@ -3,20 +3,35 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "DataBase", menuName = "Scriptable Objects/DataBase")]
 public class DataBase : ScriptableObject
 {
+    [Header("Config")]
+    public bool resetOnStart;
+
+    public bool compleated = false;
     public string rank;
+    public float timeLeft;
     public float topSpeed;
     public int pingwinKills;
 
     public void OnEnable()
     {
-        rank = "";
-        topSpeed = 0;
-        pingwinKills = 0;
+        if (resetOnStart)
+        {
+            compleated = false;
+            rank = "";
+            timeLeft = 0;
+            topSpeed = 0;
+            pingwinKills = 0;
+        }
     }
-    public void SetLevelData(string rankV, float topSpeedV, int pingwinKillsV)
+    public void SetLevelData(bool compleatedV, string rankV, float timeLeftV, float topSpeedV, int pingwinKillsV)
     {
+        compleated = compleatedV;
         rank = rankV;
-        topSpeed = topSpeedV;
+        timeLeft = timeLeftV;
+        if(topSpeed < topSpeedV)
+        {
+            topSpeed = topSpeedV;
+        }
         pingwinKills = pingwinKillsV;
     }
 }

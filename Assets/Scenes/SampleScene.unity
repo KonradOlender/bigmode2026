@@ -1014,6 +1014,7 @@ MonoBehaviour:
   speedText: {fileID: 1697421793}
   pregameSlider: {fileID: 88346570}
   sliderSpeed: 0.05
+  timeLeftText: {fileID: 603745571}
   topSpeedText: {fileID: 2038602641}
   onTimerStart:
     m_PersistentCalls:
@@ -2152,7 +2153,7 @@ GameObject:
   - component: {fileID: 434143260}
   - component: {fileID: 434143259}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Kills
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2197,7 +2198,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Penguins Killed:'
+  m_text: 'Penguins Killed: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2650,7 +2651,7 @@ GameObject:
   - component: {fileID: 603745572}
   - component: {fileID: 603745571}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Time left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2695,7 +2696,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ranks:'
+  m_text: 'Time left: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18947,7 +18948,7 @@ GameObject:
   - component: {fileID: 2038602642}
   - component: {fileID: 2038602641}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: TopSpeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18973,9 +18974,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Top speed:
-
-'
+  m_text: 'Top speed: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
