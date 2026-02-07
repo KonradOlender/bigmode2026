@@ -50,6 +50,7 @@ public class Gamemanager : MonoBehaviour
     public float force_45_65;
     public float force_65_95;
     public float force_95_100;
+    public GameObject preGameCamera;
 
 
     private bool sliderAdd = true;
@@ -138,6 +139,7 @@ public class Gamemanager : MonoBehaviour
                 }
                 ball.AddForcePreGame(force);
                 isPreGame = false;
+                preGameCamera.SetActive(false);
                 StartTimer();
             }
         }
