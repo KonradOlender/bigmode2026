@@ -2,9 +2,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
+
 {
     public Gamemanager gamemanager;
     public bool isStop;
+
+     public AK.Wwise.Event checkpointEvent;
 
     public float timeGain = 15;
     public List<ParticleSystem> particles;
@@ -37,6 +40,7 @@ public class CheckPoint : MonoBehaviour
 
     private void Checkpoint()
     {
+       checkpointEvent.Post(gameObject);
         gamemanager.AddTime(timeGain);
         foreach (var part in particles)
         {

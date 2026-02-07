@@ -484,6 +484,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CheckPoint
   gamemanager: {fileID: 166057888}
   isStop: 1
+  checkpointEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   timeGain: 15
   particles:
   - {fileID: 837062280}
@@ -1473,6 +1477,10 @@ MonoBehaviour:
   gamemanager: {fileID: 166057888}
   triggerTag: Player
   boostForce: 5
+  checkpointEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7b0a4fcb368c25a4288e4f8db51af468, type: 2}
 --- !u!4 &151587632
 Transform:
   m_ObjectHideFlags: 0
@@ -2579,8 +2587,9 @@ GameObject:
   m_Component:
   - component: {fileID: 330585546}
   - component: {fileID: 330585545}
-  - component: {fileID: 330585544}
   - component: {fileID: 330585547}
+  - component: {fileID: 330585549}
+  - component: {fileID: 330585548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2588,14 +2597,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &330585544
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
 --- !u!20 &330585545
 Camera:
   m_ObjectHideFlags: 0
@@ -2706,6 +2707,46 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &330585548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8c5d8150bea5ab4a8f52ab69472fc39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkAudioListener
+  isDefaultListener: 1
+  bOverrideScalingFactor: 0
+  scalingFactor: -1
+  listenerId: 0
+--- !u!114 &330585549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f93056c0fe4c9949b180cdc4db6a48d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkGameObj
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!4 &343557031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3050895055062153227, guid: 8c843d0550dd44eda8adfb470642bf77, type: 3}
@@ -4224,6 +4265,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0cd05ddc7f0e0a44ad6e3b41cbd4c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pingwin
+  PingwinEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   rb: {fileID: 0}
   speed: 15
   playerRB: {fileID: 1024582192}
@@ -12443,6 +12488,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CheckPoint
   gamemanager: {fileID: 166057888}
   isStop: 0
+  checkpointEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: dc8f47b37d391934ab133e134e500bc2, type: 2}
   timeGain: 5
   particles:
   - {fileID: 1261621212}
@@ -13308,6 +13357,11 @@ MonoBehaviour:
   resetPosition: {fileID: 0}
   animator: {fileID: 1318259466}
   isBoostingCooldown: 1.5
+  movementSoundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a0697eb92d2e17c4ca1564c4c8578202, type: 2}
+  speedRTPCName: Speed
 --- !u!114 &1024582198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13433,22 +13487,6 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 166057888}
-        m_TargetAssemblyTypeName: Gamemanager, Assembly-CSharp
-        m_MethodName: OpenConsole
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 71f19c4c-4a28-446f-beb1-c1ead99bcb77
-    m_ActionName: 'Player/Esc[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -25920,6 +25958,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5392390209365313541, guid: 8c843d0550dd44eda8adfb470642bf77, type: 3}
   m_PrefabInstance: {fileID: 814701229}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1385629663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1385629665}
+  - component: {fileID: 1385629664}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1385629664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385629663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3f7c9326efe6d49852ac328b1dd80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkInitializer
+  InitializationSettings: {fileID: 11400000, guid: feabc91af15b3d64f838a710a3f987cb, type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0
+--- !u!4 &1385629665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385629663}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1385719007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7978960153104458964, guid: 8c843d0550dd44eda8adfb470642bf77, type: 3}
@@ -28151,6 +28246,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0cd05ddc7f0e0a44ad6e3b41cbd4c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pingwin
+  PingwinEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   rb: {fileID: 0}
   speed: 15
   playerRB: {fileID: 1024582192}
@@ -28510,6 +28609,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0cd05ddc7f0e0a44ad6e3b41cbd4c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pingwin
+  PingwinEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   rb: {fileID: 0}
   speed: 5
   playerRB: {fileID: 0}
@@ -28746,6 +28849,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0cd05ddc7f0e0a44ad6e3b41cbd4c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pingwin
+  PingwinEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 77b6163e28c967247b37a8bf152a5ef5, type: 2}
   rb: {fileID: 0}
   speed: 5
   playerRB: {fileID: 1024582192}
@@ -31329,3 +31436,4 @@ SceneRoots:
   - {fileID: 273361984}
   - {fileID: 346628818}
   - {fileID: 1056135474}
+  - {fileID: 1385629665}
