@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody))]
+
 public class BallCharacter : MonoBehaviour
 {
     public Gamemanager gamemanager;
