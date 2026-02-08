@@ -3573,7 +3573,7 @@ MonoBehaviour:
   checkpointEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: be84e6526d6157d4aad00d1ed07d6a64, type: 2}
   musicSound: {fileID: 1823948441}
   rideSound: {fileID: 1823948448}
   rideNoice: {fileID: 1823948443}
