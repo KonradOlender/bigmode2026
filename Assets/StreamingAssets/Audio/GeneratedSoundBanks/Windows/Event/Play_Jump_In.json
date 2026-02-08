@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2708038592",
+    "Type": "Event",
+    "GUID": "{A74AAF8C-B274-470B-83A6-124B665D807E}",
+    "Language": "SFX",
+    "Hash": "{D3DC8EDD-860B-483E-686C-365A73C9B7DA}",
+    "ObjectPath": "Play_Jump_In",
+    "ShortName": "Play_Jump_In",
+    "Path": "Event/Play_Jump_In.bnk",
+    "Media": [
+     {
+      "Id": "351980496",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Objects, Luggage, Suitcase, Fall Over SND18419.wav",
+      "Path": "Media/351980496.wem",
+      "CachePath": "87/{87DA6E31-EBDE-8FF4-8D3A-358B1F89183C}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2708038592",
+      "Name": "Play_Jump_In",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Jump_In",
+      "GUID": "{A74AAF8C-B274-470B-83A6-124B665D807E}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.58770835",
+      "DurationMax": "0.58770835",
+      "MediaRefs": [
+       {
+        "Id": "351980496"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CCEEC471-18A0-DFD6-32C5-C6D612B444FB}"
+ }
+}

@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3040692703	Play_Bobsleigh_Move			\Default Work Unit\Play_Bobsleigh_Move	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	640949982	Speed			\Default Work Unit\Speed	
+

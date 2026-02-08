@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1163161249",
+    "Type": "Event",
+    "GUID": "{CA3045EB-1B7C-4BED-BCAD-F3FEFF476E9F}",
+    "Language": "SFX",
+    "Hash": "{B700160D-1A99-45D1-B727-C74D86A78543}",
+    "ObjectPath": "Play_Riser",
+    "ShortName": "Play_Riser",
+    "Path": "Event/Play_Riser.bnk",
+    "Media": [
+     {
+      "Id": "101389195",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "riser.wav",
+      "Path": "Media/101389195.wem",
+      "CachePath": "7A/{7AA8C77F-9D7C-A7B1-95C6-4BDF8D39A4DC}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1163161249",
+      "Name": "Play_Riser",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Riser",
+      "GUID": "{CA3045EB-1B7C-4BED-BCAD-F3FEFF476E9F}",
+      "DurationType": "OneShot",
+      "DurationMin": "11.255374",
+      "DurationMax": "11.255374",
+      "MediaRefs": [
+       {
+        "Id": "101389195"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{E15B924F-65F7-A755-0EBE-61F1702D167D}"
+ }
+}

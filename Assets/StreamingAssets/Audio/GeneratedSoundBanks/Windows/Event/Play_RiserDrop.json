@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2881812974",
+    "Type": "Event",
+    "GUID": "{EF6672CF-D4E0-49AB-BCAF-D090282A0F47}",
+    "Language": "SFX",
+    "Hash": "{58569982-D527-C775-EA82-383A5DEDEDE5}",
+    "ObjectPath": "Play_RiserDrop",
+    "ShortName": "Play_RiserDrop",
+    "Path": "Event/Play_RiserDrop.bnk",
+    "Media": [
+     {
+      "Id": "234400434",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "RiserDrop.wav",
+      "Path": "Media/234400434.wem",
+      "CachePath": "D0/{D0D3E5CF-5D74-5A97-FA8A-2B1E7CC36777}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2881812974",
+      "Name": "Play_RiserDrop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_RiserDrop",
+      "GUID": "{EF6672CF-D4E0-49AB-BCAF-D090282A0F47}",
+      "DurationType": "OneShot",
+      "DurationMin": "3.4619536",
+      "DurationMax": "3.4619536",
+      "MediaRefs": [
+       {
+        "Id": "234400434"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{FF876780-FDB7-9AA5-984E-F7883961675E}"
+ }
+}

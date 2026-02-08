@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2962822744	Play_Checkpoint			\Default Work Unit\Play_Checkpoint	
+
