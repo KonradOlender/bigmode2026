@@ -4,6 +4,7 @@ public class Soundmanager : MonoBehaviour
 {
     public static Soundmanager Instance;
 
+    public AudioSource musicSound;
     public AudioSource rideSound;
     public AudioSource rideNoice;
     public AudioSource rideEnd;
@@ -29,7 +30,7 @@ public class Soundmanager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        musicSound.Play();
     }
 
     // Update is called once per frame

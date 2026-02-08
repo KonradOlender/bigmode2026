@@ -144,6 +144,7 @@ public class Gamemanager : MonoBehaviour
                 ball.AddForcePreGame(force);
                 isPreGame = false;
                 preGameCamera.SetActive(false);
+                pregameSlider.gameObject.SetActive(false);
                 StartTimer();
             }
         }
