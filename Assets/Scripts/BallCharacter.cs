@@ -126,7 +126,7 @@ public class BallCharacter : MonoBehaviour
             camera.fieldOfView = 60 + rb.linearVelocity.magnitude;
         }
 
-        if (rb.linearVelocity.magnitude < maxSpeed && playerInControl)
+        if (rb.linearVelocity.magnitude < maxSpeed && playerInControl && isGrounded)
         {
             rb.AddForce(moveDirection * moveForce, ForceMode.Force);
 
