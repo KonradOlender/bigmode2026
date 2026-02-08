@@ -231,6 +231,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b2508e816caa3a4c8641e9c4adcf873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Soundmanager
+  checkpointEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: be84e6526d6157d4aad00d1ed07d6a64, type: 2}
   rideSound: {fileID: 14798077}
   rideEnd: {fileID: 14798079}
 --- !u!82 &14798077
@@ -487,7 +491,7 @@ MonoBehaviour:
   checkpointEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 29ac1942eb103b144a3220aefd2eeddb, type: 2}
   timeGain: 15
   particles:
   - {fileID: 837062280}
@@ -1647,6 +1651,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gamemanager
   levelDataBase: {fileID: 11400000, guid: 33cd9190f0fc2a04c8cf25eceb7ee524, type: 2}
+  checkpointEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c031e6c0f80b927458536ab75e33a5c3, type: 2}
+  SliderEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f3611d68538987445a484bcb698363b3, type: 2}
+  SliderDropEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2bf29f5cd51561242bca8cc191c39b32, type: 2}
   ball: {fileID: 1024582197}
   timeLimit: 15
   isPreGame: 1
@@ -2590,6 +2606,7 @@ GameObject:
   - component: {fileID: 330585547}
   - component: {fileID: 330585549}
   - component: {fileID: 330585548}
+  - component: {fileID: 330585550}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2747,6 +2764,14 @@ MonoBehaviour:
   scalingFactor: 1
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!81 &330585550
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
 --- !u!4 &343557031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3050895055062153227, guid: 8c843d0550dd44eda8adfb470642bf77, type: 3}
@@ -13171,7 +13196,7 @@ Transform:
   m_GameObject: {fileID: 1004644620}
   serializedVersion: 2
   m_LocalRotation: {x: 0.08924399, y: -0.2568731, z: 0.023829402, w: 0.96202075}
-  m_LocalPosition: {x: 14.02, y: 4.1, z: 75.99}
+  m_LocalPosition: {x: 12.751, y: 3.624, z: 78.197}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13357,11 +13382,6 @@ MonoBehaviour:
   resetPosition: {fileID: 0}
   animator: {fileID: 1318259466}
   isBoostingCooldown: 1.5
-  movementSoundEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a0697eb92d2e17c4ca1564c4c8578202, type: 2}
-  speedRTPCName: Speed
 --- !u!114 &1024582198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13487,6 +13507,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 166057888}
+        m_TargetAssemblyTypeName: Gamemanager, Assembly-CSharp
+        m_MethodName: OpenConsole
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 73179e54-ea15-44f2-9b21-3863c6e8c7ef
+    m_ActionName: 'Player/ESC[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

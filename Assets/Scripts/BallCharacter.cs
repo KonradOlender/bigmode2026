@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody))]
+
 public class BallCharacter : MonoBehaviour
 {
     public Gamemanager gamemanager;
@@ -29,16 +29,11 @@ public class BallCharacter : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] public float isBoostingCooldown;
 
-    [Header("Wwise Settings")]
-    [SerializeField] private AK.Wwise.Event movementSoundEvent;
-    [SerializeField] private string speedRTPCName = "Speed";
-
     private Rigidbody rb;
     private Vector2 moveInput;
     private bool isGrounded = false;
     private bool wasGrounded = false;
     private bool isBoosting;
-    private bool isMovementSoundPlaying = false;
 
     private string currentAnim = "";
 
@@ -108,45 +103,31 @@ public class BallCharacter : MonoBehaviour
     private void ApplyMovement()
     {
         if (cameraTransform == null) return;
-
+        
         Vector3 cameraForward = cameraTransform.forward;
         Vector3 cameraRight = cameraTransform.right;
-
+        
         cameraForward.y = 0f;
         cameraRight.y = 0f;
         cameraForward.Normalize();
         cameraRight.Normalize();
 
         gamemanager.setSpeedText(rb.linearVelocity.magnitude);
+        //Debug.Log(rb.linearVelocity.magnitude);
+        //Debug.Log(rb.linearVelocity);
 
         Vector3 moveDirection = cameraRight * moveInput.x;
+        //cameraForward * moveInput.y +
 
         if(camera.fieldOfView >= minFOV && camera.fieldOfView <= maxFOV)
         {
             camera.fieldOfView = 60 + rb.linearVelocity.magnitude;
         }
+        
 
         if (rb.linearVelocity.magnitude < maxSpeed && playerInControl && isGrounded)
         {
             rb.AddForce(moveDirection * moveForce, ForceMode.Force);
-
-            // Update and play movement sound event with speed parameter
-            if (movementSoundEvent != null)
-            {
-                float speed = Mathf.Clamp(rb.linearVelocity.magnitude, 0, 100);
-                AkSoundEngine.SetRTPCValue(speedRTPCName, speed, gameObject);
-
-                if (!isMovementSoundPlaying)
-                {
-                    movementSoundEvent.Post(gameObject);
-                    isMovementSoundPlaying = true;
-                }
-            }
-        }
-        else if (rb.linearVelocity.magnitude < 0.1f && isMovementSoundPlaying)
-        {
-            AkSoundEngine.StopAll(gameObject);
-            isMovementSoundPlaying = false;
         }
     }
     

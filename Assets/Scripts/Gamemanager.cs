@@ -8,6 +8,12 @@ using UnityEngine.SceneManagement;
 public class Gamemanager : MonoBehaviour
 {
     public DataBase levelDataBase;
+    public AK.Wwise.Event checkpointEvent;
+     public AK.Wwise.Event SliderEvent;
+     public AK.Wwise.Event SliderDropEvent;
+
+
+
     public BallCharacter ball;
     [Header("Timer Settings")]
     [SerializeField] private float timeLimit = 60f;
@@ -60,6 +66,7 @@ public class Gamemanager : MonoBehaviour
     private void Start()
     {
         Soundmanager.Instance.RideSoundStop();
+       SliderEvent.Post(gameObject);
 
         uiElementWinScreen.SetActive(false);
         uiElementFailedScreen.SetActive(false);
@@ -120,7 +127,7 @@ public class Gamemanager : MonoBehaviour
     public void getCurrentSliderValue(InputAction.CallbackContext context)
     {
         if (isPreGame)
-        {
+        {   
             float force = 0;
             if (context.started)
             {
@@ -143,6 +150,8 @@ public class Gamemanager : MonoBehaviour
                 ball.AddForcePreGame(force);
                 isPreGame = false;
                 preGameCamera.SetActive(false);
+                SliderEvent.Stop(gameObject);
+                SliderDropEvent.Post(gameObject);   
                 StartTimer();
             }
         }
@@ -231,6 +240,8 @@ public class Gamemanager : MonoBehaviour
         isFiled = true;
         uiElementClock.SetActive(false);
         uiElementFailedScreen.SetActive(true);
+            checkpointEvent.Post(gameObject);
+
     }
 
     public void setSpeedText(float value)

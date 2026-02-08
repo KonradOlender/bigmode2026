@@ -49,6 +49,7 @@ public class CheckPoint : MonoBehaviour
     }
     private void Stop()
     {
+        checkpointEvent.Post(gameObject);
         gamemanager.Win();
     }
 }
