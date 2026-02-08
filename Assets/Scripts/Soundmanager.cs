@@ -32,7 +32,8 @@ public class Soundmanager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        checkpointEvent.Post(gameObject);
+        //checkpointEvent.Post(gameObject);
+        musicSound.Play();
     }
 
     // Update is called once per frame
