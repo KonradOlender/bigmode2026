@@ -9,6 +9,7 @@ public class DataBase : ScriptableObject
     public bool compleated = false;
     public string rank;
     public float timeLeft;
+    public string formatedTime;
     public float topSpeed;
     public int pingwinKills;
 
@@ -23,13 +24,14 @@ public class DataBase : ScriptableObject
             pingwinKills = 0;
         }
     }
-    public void SetLevelData(bool compleatedV, string rankV, float timeLeftV, float topSpeedV, int pingwinKillsV)
+    public void SetLevelData(bool compleatedV, string rankV, float timeLeftV, string formatedTimeV, float topSpeedV, int pingwinKillsV)
     {
         compleated = compleatedV;
         rank = rankV;
         if(timeLeft < timeLeftV)
         {
             timeLeft = timeLeftV;
+            formatedTime = formatedTimeV;
         }
         if(topSpeed < topSpeedV)
         {

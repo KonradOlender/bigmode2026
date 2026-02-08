@@ -15,7 +15,7 @@ public class DataReader : MonoBehaviour
         label2.gameObject.SetActive(false);
         label3.gameObject.SetActive(false);
 
-        label1.text = label1.text + data.timeLeft.ToString();
+        label1.text = label1.text + data.formatedTime;
         label2.text = label2.text + data.topSpeed.ToString();
         label3.text = label3.text + data.pingwinKills.ToString();
 
