@@ -23,6 +23,7 @@ public class Scenemanager : MonoBehaviour
 
     public void ToTutorial(bool value)
     {
+        Debug.Log("Tutorial");
         if (tutorialScreen != null)
         {
             tutorialScreen.SetActive(value);
