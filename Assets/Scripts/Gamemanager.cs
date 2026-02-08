@@ -28,6 +28,7 @@ public class Gamemanager : MonoBehaviour
     public GameObject uiElementSpeedomater;
     public GameObject uimenu;
     public TMP_Text speedText;
+    public Slider speedSlider;
     public Slider pregameSlider;
     public float sliderSpeed;
 
@@ -241,7 +242,12 @@ public class Gamemanager : MonoBehaviour
         {
             topSpeed = value;
         }
-        speedText.text = value.ToString("F2");
+        speedText.text = value.ToString("F0");
+        if(value / 100 < speedSlider.maxValue)
+        {
+            speedSlider.value = value / 100;
+        }
+        
     }
 
     public void LoadScene(int sceneIndex)
