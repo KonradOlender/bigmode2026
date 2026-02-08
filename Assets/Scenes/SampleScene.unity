@@ -3905,7 +3905,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 29ac1942eb103b144a3220aefd2eeddb, type: 2}
-  timeGain: 15
+  timeGain: 5
   particles:
   - {fileID: 671448487}
   - {fileID: 1145662302}
@@ -12210,7 +12210,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 29ac1942eb103b144a3220aefd2eeddb, type: 2}
-  timeGain: 15
+  timeGain: 5
   particles:
   - {fileID: 2061457187}
   - {fileID: 2019876210}
