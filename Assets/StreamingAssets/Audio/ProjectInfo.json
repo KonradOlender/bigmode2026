@@ -12,7 +12,7 @@
     "GUID": "{6B534E74-66F7-4297-BD7C-51EA0DEAE95B}",
     "BasePlatform": "Windows",
     "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
-    "Path": "G:/BobslasyerAudio/BOBSlayer/GeneratedSoundBanks/Windows/"
+    "Path": "GeneratedSoundBanks/Windows"
    }
   ],
   "Languages": [
@@ -24,6 +24,6 @@
     "UseAsStandIn": "true"
    }
   ],
-  "FileHash": "{265136D4-6662-723B-C1CD-2E9188605DE6}"
+  "FileHash": "{DAB86877-564A-2F84-7F86-4D36910B00BE}"
  }
 }

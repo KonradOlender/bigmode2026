@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3205633465",
+    "Type": "Event",
+    "GUID": "{46972AB6-EF4F-4B92-B3F7-1B13189E198A}",
+    "Language": "SFX",
+    "Hash": "{1C480DB5-11E8-3A8F-8861-E3AE8A699571}",
+    "ObjectPath": "Play_Penguin_Slice",
+    "ShortName": "Play_Penguin_Slice",
+    "Path": "Event/Play_Penguin_Slice.bnk",
+    "Media": [
+     {
+      "Id": "897386478",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "penguin_slice1.wav",
+      "Path": "Media/897386478.wem",
+      "CachePath": "DD/{DDA702B9-C213-5142-EFDB-19F77082C3C5}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3205633465",
+      "Name": "Play_Penguin_Slice",
+      "ObjectPath": "\\Events\\Default Work Unit\\PIngwinSlice\\Play_Penguin_Slice",
+      "GUID": "{46972AB6-EF4F-4B92-B3F7-1B13189E198A}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.575685",
+      "DurationMax": "3.063023",
+      "MediaRefs": [
+       {
+        "Id": "897386478"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{5E64C803-77FF-0409-722C-B24DEFEA0ECC}"
+ }
+}

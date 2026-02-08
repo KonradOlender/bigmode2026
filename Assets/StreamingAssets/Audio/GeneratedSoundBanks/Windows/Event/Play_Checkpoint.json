@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2962822744",
+    "Type": "Event",
+    "GUID": "{CC71AFD2-BBF8-4EC9-90F6-785D3C3773E7}",
+    "Language": "SFX",
+    "Hash": "{063223B0-656B-F39D-7355-7CF193BDD297}",
+    "ObjectPath": "Play_Checkpoint",
+    "ShortName": "Play_Checkpoint",
+    "Path": "Event/Play_Checkpoint.bnk",
+    "Media": [
+     {
+      "Id": "79073991",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Checkpoint.wav",
+      "Path": "Media/79073991.wem",
+      "CachePath": "6D/{6DFF8E77-4E9D-8A02-1518-F80A85BE9E6E}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2962822744",
+      "Name": "Play_Checkpoint",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Checkpoint",
+      "GUID": "{CC71AFD2-BBF8-4EC9-90F6-785D3C3773E7}",
+      "DurationType": "OneShot",
+      "DurationMin": "3.7213688",
+      "DurationMax": "4.5551543",
+      "MediaRefs": [
+       {
+        "Id": "79073991"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{D5784974-D111-D3F8-8D36-F834AF0FC460}"
+ }
+}

@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3205633465	Play_Penguin_Slice			\Default Work Unit\PIngwinSlice\Play_Penguin_Slice	
+

@@ -1,0 +1,66 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3040692703",
+    "Type": "Event",
+    "GUID": "{6C028061-D312-4B90-BFE5-66B990EE5A11}",
+    "Language": "SFX",
+    "Hash": "{DD781555-5E5F-ABFB-7B8A-027CFA8C2F0B}",
+    "ObjectPath": "Play_Bobsleigh_Move",
+    "ShortName": "Play_Bobsleigh_Move",
+    "Path": "Event/Play_Bobsleigh_Move.bnk",
+    "Media": [
+     {
+      "Id": "186246000",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Sports, Winter, Bob Sleigh, On Board, Driving, Metal Rattle, Hollow, Stop 03 SND5194 3.wav",
+      "Path": "Media/186246000.wem",
+      "CachePath": "EC/{ECA4AFD4-2599-A65C-CB6B-4F0F8923310B}.wem"
+     },
+     {
+      "Id": "1029221817",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "noise.wav",
+      "Path": "Media/1029221817.wem",
+      "CachePath": "4F/{4F9EEA86-752F-9721-2415-5971AB4D0FE5}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3040692703",
+      "Name": "Play_Bobsleigh_Move",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Bobsleigh_Move",
+      "GUID": "{6C028061-D312-4B90-BFE5-66B990EE5A11}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "186246000"
+       },
+       {
+        "Id": "1029221817"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "640949982",
+      "Name": "Speed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Speed",
+      "GUID": "{E127D17C-FDC3-4D0B-A31F-ED3E37D35B58}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{63BFAD69-CF93-2FEE-BD5B-13A7A17DF52A}"
+ }
+}
