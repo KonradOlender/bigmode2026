@@ -1,6 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	2164775684	Play_Speedup			\Default Work Unit\Play_Speedup	
-
-Game Parameter	ID	Name			Wwise Object Path	Notes
-	640949982	Speed			\Default Work Unit\Speed	
-

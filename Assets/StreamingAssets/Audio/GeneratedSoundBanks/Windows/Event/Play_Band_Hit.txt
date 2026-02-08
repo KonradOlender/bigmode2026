@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	1570834349	Play_Band_Hit			\Default Work Unit\Play_Band_Hit	
-

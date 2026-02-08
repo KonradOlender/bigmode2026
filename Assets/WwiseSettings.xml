@@ -3,7 +3,7 @@
     <CopySoundBanksAsPreBuildStep>true</CopySoundBanksAsPreBuildStep>
     <GenerateSoundBanksAsPreBuildStep>false</GenerateSoundBanksAsPreBuildStep>
     <WwiseStreamingAssetsPath>Audio\GeneratedSoundBanks</WwiseStreamingAssetsPath>
-    <RootOutputPath>../bigmode2026_WwiseProject/GeneratedSoundBanks/</RootOutputPath>
+    <RootOutputPath>StreamingAssets/Audio/GeneratedSoundBanks</RootOutputPath>
     <CreatedPicker>true</CreatedPicker>
     <CreateWwiseGlobal>true</CreateWwiseGlobal>
     <CreateWwiseListener>true</CreateWwiseListener>
@@ -20,7 +20,7 @@
     <AutoSyncWaapi>true</AutoSyncWaapi>
     <WaapiChangePending>false</WaapiChangePending>
     <InstallationWasRequested>true</InstallationWasRequested>
-    <UseGitRepository>true</UseGitRepository>
+    <UseGitRepository>false</UseGitRepository>
     <PackageSource></PackageSource>
     <AddressableBankFolder>WwiseData/Bank</AddressableBankFolder>
     <UseCustomBuildScript>false</UseCustomBuildScript>
