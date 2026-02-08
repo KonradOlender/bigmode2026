@@ -7,6 +7,10 @@ public class Pingwin : MonoBehaviour
 
     public Rigidbody playerRB;
     public float boostForce = 3;
+
+    public GameObject model;
+    public ParticleSystem particle;
+
     void Start()
     {
         //rb = GetComponent<Rigidbody>();
@@ -22,9 +26,10 @@ public class Pingwin : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            Debug.Log("testtesttest");
             playerRB.AddForce((playerRB.linearVelocity.normalized * -1) * boostForce, ForceMode.Impulse);
-            Debug.Log("Hit");
-            Destroy(this.gameObject);
+            model.SetActive(false);
+            particle.Play();
         }
     }
 }

@@ -37,6 +37,7 @@ public class CheckPoint : MonoBehaviour
 
     private void Checkpoint()
     {
+        Soundmanager.Instance.CheckPointPlay();
         gamemanager.AddTime(timeGain);
         foreach (var part in particles)
         {

@@ -4,8 +4,14 @@ public class Soundmanager : MonoBehaviour
 {
     public static Soundmanager Instance;
 
+    public AudioSource musicSound;
     public AudioSource rideSound;
+    public AudioSource rideNoice;
     public AudioSource rideEnd;
+    public AudioSource checkPoint;
+    public AudioSource boost;
+    public AudioSource meta;
+    public AudioSource lose;
 
     private void Awake()
     {
@@ -24,7 +30,7 @@ public class Soundmanager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        musicSound.Play();
     }
 
     // Update is called once per frame
@@ -36,19 +42,36 @@ public class Soundmanager : MonoBehaviour
     public void RideSoundPlay()
     {
         rideSound.Play();
+        rideNoice.Play();
     }
     public void RideSoundStop()
     {
         rideSound.Stop();
+        rideNoice.Stop();
     }
 
     public void RideEndPlay()
     {
         rideEnd.Play();
     }
-    public void RideEndStop()
+
+    public void CheckPointPlay()
     {
-        rideEnd.Stop();
+        checkPoint.Play();
+    }
+
+    public void BoostPlay()
+    {
+        boost.Play();
+    }
+    public void metaPlay()
+    {
+        meta.Play();
+    }
+
+    public void LosePlay()
+    {
+        lose.Play();
     }
 
 

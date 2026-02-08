@@ -28,6 +28,7 @@ public class Gamemanager : MonoBehaviour
     public GameObject uiElementSpeedomater;
     public GameObject uimenu;
     public TMP_Text speedText;
+    public Slider speedSlider;
     public Slider pregameSlider;
     public float sliderSpeed;
 
@@ -143,6 +144,7 @@ public class Gamemanager : MonoBehaviour
                 ball.AddForcePreGame(force);
                 isPreGame = false;
                 preGameCamera.SetActive(false);
+                pregameSlider.gameObject.SetActive(false);
                 StartTimer();
             }
         }
@@ -205,6 +207,7 @@ public class Gamemanager : MonoBehaviour
     {
         if (!isFiled)
         {
+            Soundmanager.Instance.metaPlay();
             StopTimer();
             topSpeedText.text = topSpeedText.text + topSpeed.ToString("F2");
             timeLeftText.text = timeLeftText.text + GetFormattedTime();
@@ -228,6 +231,7 @@ public class Gamemanager : MonoBehaviour
     }
     public void Failed()
     {
+        Soundmanager.Instance.LosePlay();
         isFiled = true;
         uiElementClock.SetActive(false);
         uiElementFailedScreen.SetActive(true);
@@ -239,7 +243,12 @@ public class Gamemanager : MonoBehaviour
         {
             topSpeed = value;
         }
-        speedText.text = value.ToString("F2");
+        speedText.text = value.ToString("F0");
+        if(value / 100 < speedSlider.maxValue)
+        {
+            speedSlider.value = value / 100;
+        }
+        
     }
 
     public void LoadScene(int sceneIndex)
