@@ -240,7 +240,7 @@ MonoBehaviour:
   checkpointEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: be84e6526d6157d4aad00d1ed07d6a64, type: 2}
   musicSound: {fileID: 14798085}
   rideSound: {fileID: 14798077}
   rideNoice: {fileID: 14798083}
@@ -15174,8 +15174,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 17e50f79-af8d-441f-92a8-0929924c397b
-    m_ActionName: 'Player/Esc[/Keyboard/escape]'
+    m_ActionId: d72cdefe-cb3c-47d9-9415-43d345d09a45
+    m_ActionName: 'Player/ESC[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
