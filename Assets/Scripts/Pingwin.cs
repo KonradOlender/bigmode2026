@@ -28,14 +28,10 @@ public class Pingwin : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("testtesttest");
             playerRB.AddForce((playerRB.linearVelocity.normalized * -1) * boostForce, ForceMode.Impulse);
             model.SetActive(false);
             particle.Play();
-            Debug.Log("Hit");
             PingwinEvent.Post(gameObject);
-            Destroy(this.gameObject);
-            
         }
     }
 }
