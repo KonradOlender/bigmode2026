@@ -15,4 +15,5 @@ MonoBehaviour:
   objectName: Play_Lose
   id: 3796466245
   guid: 2D3A7460-A7C4-40A9-92B3-D9DDCF5F2F17
-  IsInUserDefinedSoundBank: 0
+  AutoBank: {fileID: 0}
+  IsInUserDefinedSoundBank: 1

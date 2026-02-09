@@ -15,4 +15,5 @@ MonoBehaviour:
   objectName: Play_Speedup
   id: 2164775684
   guid: 9DB74368-40F1-4394-9B57-AAD9A7FA0CDD
-  IsInUserDefinedSoundBank: 0
+  AutoBank: {fileID: 0}
+  IsInUserDefinedSoundBank: 1

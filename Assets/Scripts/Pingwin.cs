@@ -13,6 +13,8 @@ public class Pingwin : MonoBehaviour
     public GameObject model;
     public ParticleSystem particle;
 
+    public Gamemanager gamemanager;
+
     void Start()
     {
         //rb = GetComponent<Rigidbody>();
@@ -31,6 +33,8 @@ public class Pingwin : MonoBehaviour
             playerRB.AddForce((playerRB.linearVelocity.normalized * -1) * boostForce, ForceMode.Impulse);
             model.SetActive(false);
             particle.Play();
+            Soundmanager.Instance.PingwinKillPlay();
+            gamemanager.AddPingwinKilled();
             PingwinEvent.Post(gameObject);
         }
     }

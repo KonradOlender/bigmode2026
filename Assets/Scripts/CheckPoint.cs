@@ -40,7 +40,8 @@ public class CheckPoint : MonoBehaviour
 
     private void Checkpoint()
     {
-       checkpointEvent.Post(gameObject);
+       //checkpointEvent.Post(gameObject);
+        Soundmanager.Instance.CheckPointPlay();
         gamemanager.AddTime(timeGain);
         foreach (var part in particles)
         {

@@ -42,6 +42,8 @@ public class Gamemanager : MonoBehaviour
     [Header("Stats")]
     public TMP_Text timeLeftText;
     public TMP_Text topSpeedText;
+    public TMP_Text killedText;
+    private int currentKilled = 0;
 
 
     [Header("Events")]
@@ -225,6 +227,7 @@ public class Gamemanager : MonoBehaviour
             StopTimer();
             topSpeedText.text = topSpeedText.text + ((float)Math.Round(topSpeed, 2)).ToString();
             timeLeftText.text = timeLeftText.text + GetFormattedTime();
+            killedText.text = killedText.text + currentKilled.ToString();
             uiElementClock.SetActive(false);
             uiElementSpeedomater.SetActive(false);
             uiElementWinScreen.SetActive(true);
@@ -235,13 +238,13 @@ public class Gamemanager : MonoBehaviour
     public void EndLevelBack()
     {
         Soundmanager.Instance.RideSoundStop();
-        levelDataBase.SetLevelData(true, "S", currentTime, GetFormattedTime(), (float)Math.Round(topSpeed, 2), 0);
+        levelDataBase.SetLevelData(true, "S", currentTime, GetFormattedTime(), (float)Math.Round(topSpeed, 2));
         SceneManager.LoadScene(0);
     }
     public void EndLevelNext(int levelIndex)
     {
         Soundmanager.Instance.RideSoundStop();
-        levelDataBase.SetLevelData(true, "S", currentTime, GetFormattedTime(), (float)Math.Round(topSpeed, 2), 0);
+        levelDataBase.SetLevelData(true, "S", currentTime, GetFormattedTime(), (float)Math.Round(topSpeed, 2));
         SceneManager.LoadScene(levelIndex);
     }
     public void Failed()
@@ -275,5 +278,12 @@ public class Gamemanager : MonoBehaviour
         SceneManager.LoadScene(sceneIndex);
     }
 
-    
+    public void AddPingwinKilled()
+    {
+        currentKilled += 1;
+        levelDataBase.AddPingwinKilled(1);
+    }
+
+
+
 }

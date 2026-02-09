@@ -15,4 +15,5 @@ MonoBehaviour:
   objectName: Play_Meta
   id: 1647486249
   guid: 37835323-F328-4074-86BC-1AB4AE8FADEE
-  IsInUserDefinedSoundBank: 0
+  AutoBank: {fileID: 0}
+  IsInUserDefinedSoundBank: 1

@@ -24,7 +24,7 @@ public class DataBase : ScriptableObject
             pingwinKills = 0;
         }
     }
-    public void SetLevelData(bool compleatedV, string rankV, float timeLeftV, string formatedTimeV, float topSpeedV, int pingwinKillsV)
+    public void SetLevelData(bool compleatedV, string rankV, float timeLeftV, string formatedTimeV, float topSpeedV)
     {
         compleated = compleatedV;
         rank = rankV;
@@ -37,6 +37,10 @@ public class DataBase : ScriptableObject
         {
             topSpeed = topSpeedV;
         }
-        pingwinKills = pingwinKillsV;
+    }
+
+    public void AddPingwinKilled(int value)
+    {
+        pingwinKills += value;
     }
 }

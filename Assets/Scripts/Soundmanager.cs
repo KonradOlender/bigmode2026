@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Soundmanager : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class Soundmanager : MonoBehaviour
     public AudioSource boost;
     public AudioSource meta;
     public AudioSource lose;
+    public AudioSource pingwinHit;
+
+    public Slider musicVolume;
 
     private void Awake()
     {
@@ -39,7 +43,7 @@ public class Soundmanager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        musicSound.volume = musicVolume.value;
     }
 
     public void RideSoundPlay()
@@ -75,6 +79,11 @@ public class Soundmanager : MonoBehaviour
     public void LosePlay()
     {
         lose.Play();
+    }
+
+    public void PingwinKillPlay()
+    {
+        pingwinHit.Play();
     }
 
 
