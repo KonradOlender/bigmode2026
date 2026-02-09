@@ -15,4 +15,5 @@ MonoBehaviour:
   objectName: Play_risernew
   id: 300418833
   guid: F2E76AF9-23F3-41B8-A2C1-05C140BC0AEE
-  IsInUserDefinedSoundBank: 0
+  AutoBank: {fileID: 0}
+  IsInUserDefinedSoundBank: 1

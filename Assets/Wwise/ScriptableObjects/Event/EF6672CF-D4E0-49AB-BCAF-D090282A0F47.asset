@@ -15,4 +15,5 @@ MonoBehaviour:
   objectName: Play_RiserDrop
   id: 2881812974
   guid: EF6672CF-D4E0-49AB-BCAF-D090282A0F47
-  IsInUserDefinedSoundBank: 0
+  AutoBank: {fileID: 0}
+  IsInUserDefinedSoundBank: 1

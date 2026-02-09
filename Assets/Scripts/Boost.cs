@@ -28,7 +28,8 @@ public class Boost : MonoBehaviour
             
             ball = other.GetComponent<BallCharacter>();
             ball.AddBoost(boostForce);
-       checkpointEvent.Post(gameObject);
+            Soundmanager.Instance.BoostPlay();
+            //checkpointEvent.Post(gameObject);
 
         }
     }

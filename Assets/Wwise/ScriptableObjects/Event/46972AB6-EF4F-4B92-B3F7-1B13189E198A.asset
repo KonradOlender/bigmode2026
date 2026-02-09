@@ -15,4 +15,5 @@ MonoBehaviour:
   objectName: Play_Penguin_Slice
   id: 3205633465
   guid: 46972AB6-EF4F-4B92-B3F7-1B13189E198A
-  IsInUserDefinedSoundBank: 0
+  AutoBank: {fileID: 0}
+  IsInUserDefinedSoundBank: 1
