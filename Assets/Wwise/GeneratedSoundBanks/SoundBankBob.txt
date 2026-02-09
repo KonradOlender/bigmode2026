@@ -1,0 +1,41 @@
+Event	ID	Name			Wwise Object Path	Notes
+	300418833	Play_risernew			\Default Work Unit\Play_risernew	
+	1163161249	Play_Riser			\Default Work Unit\Play_Riser	
+	1570834349	Play_Band_Hit			\Default Work Unit\Play_Band_Hit	
+	1647486249	Play_Meta			\Default Work Unit\Play_Meta	
+	2164775684	Play_Speedup			\Default Work Unit\Play_Speedup	
+	2708038592	Play_Jump_In			\Default Work Unit\Play_Jump_In	
+	2712047697	Play_Fall			\Default Work Unit\Play_Fall	
+	2822207957	Play_Run			\Default Work Unit\Play_Run	
+	2881812974	Play_RiserDrop			\Default Work Unit\Play_RiserDrop	
+	2932040671	Play_Music			\Default Work Unit\Play_Music	
+	2962822744	Play_Checkpoint			\Default Work Unit\Play_Checkpoint	
+	3040692703	Play_Bobsleigh_Move			\Default Work Unit\Play_Bobsleigh_Move	
+	3205633465	Play_Penguin_Slice			\Default Work Unit\PIngwinSlice\Play_Penguin_Slice	
+	3206947759	Play_Turn			\Default Work Unit\Play_Turn	
+	3796466245	Play_Lose			\Default Work Unit\Play_Lose	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	640949982	Speed			\Default Work Unit\Speed	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	65906973	Music	.cache\15\{15F22EA1-EC8F-000B-16D5-685CD5664C82}.wem		\Containers\Default Work Unit\Music		15631852
+	79073991	Checkpoint	.cache\6D\{6DFF8E77-4E9D-8A02-1518-F80A85BE9E6E}.wem		\Containers\Default Work Unit\Checkpoint		705696
+	101389195	Riser	.cache\7A\{7AA8C77F-9D7C-A7B1-95C6-4BDF8D39A4DC}.wem		\Containers\Default Work Unit\Riser		1985544
+	186246000	Ambient_Loop	.cache\EC\{ECA4AFD4-2599-A65C-CB6B-4F0F8923310B}.wem		\Containers\Default Work Unit\Bobsleigh_Move\Ambient_Loop		2744012
+	234400434	RiserDrop	.cache\06\{06E12F5C-C5D2-EA23-5DF1-55F13402D5E6}.wem		\Containers\Default Work Unit\RiserDrop		610784
+	321706249	Fall	.cache\BE\{BE257C85-A71D-E7C4-C5F5-69049DD4CCA2}.wem		\Containers\Default Work Unit\Fall		120984
+	351980496	Jump_In	.cache\87\{87DA6E31-EBDE-8FF4-8D3A-358B1F89183C}.wem		\Containers\Default Work Unit\Jump_In		112936
+	407263779	Step2	.cache\7D\{7DECA80F-FEEE-6372-7FFC-EAADC9DEC9B2}.wem		\Containers\Default Work Unit\Run\Step2		10914
+	436744132	Lose	.cache\1D\{1DC1572A-A932-7D40-0616-A72D51728F36}.wem		\Containers\Default Work Unit\Lose		441096
+	702913062	Speedup	.cache\E6\{E651EB63-E40A-49E2-43A7-2AD422371920}.wem		\Containers\Default Work Unit\Speedup		431732
+	734714370	Step4	.cache\C1\{C1AB5717-4D6F-1B0C-5B0A-BE868DBAC6D8}.wem		\Containers\Default Work Unit\Run\Step4		7148
+	833998127	Meta	.cache\52\{52F3973E-F9EC-5ABD-C45D-4192EF2688A5}.wem		\Containers\Default Work Unit\Meta		1587696
+	834813033	risernew	.cache\63\{631E1924-1580-1FE1-2D77-13F92585FF4F}.wem		\Containers\Default Work Unit\risernew		702080
+	897386478	Penguin_Slice	.cache\DD\{DDA702B9-C213-5142-EFDB-19F77082C3C5}.wem		\Containers\Default Work Unit\Penguin_Slice		481464
+	902394561	Band_Hit	.cache\11\{1152E21E-C501-ABFD-F741-0D560E4F0836}.wem		\Containers\Default Work Unit\Band_Hit		506900
+	910831133	Step1	.cache\2B\{2BF5FB04-3BA2-3164-23BD-8FA341FFDD30}.wem		\Containers\Default Work Unit\Run\Step1		15344
+	947742990	Turn	.cache\58\{58FFD13A-22E3-5572-DFDF-D3D117A2FAF3}.wem		\Containers\Default Work Unit\Turn		618876
+	983774758	Step3	.cache\2E\{2E08C39C-7767-B545-4B94-27AC0DAA00BD}.wem		\Containers\Default Work Unit\Run\Step3		19484
+	1029221817	Wind_Noise_Loop	.cache\4F\{4F9EEA86-752F-9721-2415-5971AB4D0FE5}.wem		\Containers\Default Work Unit\Bobsleigh_Move\Wind_Noise_Loop		1635312
+

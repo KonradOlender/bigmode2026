@@ -9,7 +9,7 @@ using System;
 public class Gamemanager : MonoBehaviour
 {
     public DataBase levelDataBase;
-    public AK.Wwise.Event checkpointEvent;
+    public AK.Wwise.Event LoseEvent;
      public AK.Wwise.Event SliderEvent;
      public AK.Wwise.Event SliderDropEvent;
 
@@ -223,7 +223,6 @@ public class Gamemanager : MonoBehaviour
     {
         if (!isFiled)
         {
-            Soundmanager.Instance.metaPlay();
             StopTimer();
             topSpeedText.text = topSpeedText.text + ((float)Math.Round(topSpeed, 2)).ToString();
             timeLeftText.text = timeLeftText.text + GetFormattedTime();
@@ -249,12 +248,11 @@ public class Gamemanager : MonoBehaviour
     }
     public void Failed()
     {
-        Soundmanager.Instance.LosePlay();
         isFiled = true;
         uiElementClock.SetActive(false);
         uiElementSpeedomater.SetActive(false);
         uiElementFailedScreen.SetActive(true);
-            checkpointEvent.Post(gameObject);
+            LoseEvent.Post(gameObject);
 
     }
 

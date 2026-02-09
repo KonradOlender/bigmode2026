@@ -11,7 +11,6 @@ public class Soundmanager : MonoBehaviour
     public AudioSource rideSound;
     public AudioSource rideNoice;
     public AudioSource rideEnd;
-    public AudioSource checkPoint;
     public AudioSource boost;
     public AudioSource meta;
     public AudioSource lose;
@@ -41,10 +40,7 @@ public class Soundmanager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        musicSound.volume = musicVolume.value;
-    }
+
 
     public void RideSoundPlay()
     {
@@ -62,29 +58,8 @@ public class Soundmanager : MonoBehaviour
         rideEnd.Play();
     }
 
-    public void CheckPointPlay()
-    {
-        checkPoint.Play();
-    }
 
-    public void BoostPlay()
-    {
-        boost.Play();
-    }
-    public void metaPlay()
-    {
-        meta.Play();
-    }
 
-    public void LosePlay()
-    {
-        lose.Play();
-    }
-
-    public void PingwinKillPlay()
-    {
-        pingwinHit.Play();
-    }
 
 
 }

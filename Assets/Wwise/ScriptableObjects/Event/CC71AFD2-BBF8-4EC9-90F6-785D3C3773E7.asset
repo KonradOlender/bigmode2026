@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: Play_Checkpoint
   id: 2962822744
   guid: CC71AFD2-BBF8-4EC9-90F6-785D3C3773E7
-  IsInUserDefinedSoundBank: 0
+  IsInUserDefinedSoundBank: 1

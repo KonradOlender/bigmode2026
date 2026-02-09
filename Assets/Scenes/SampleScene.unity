@@ -286,7 +286,6 @@ GameObject:
   - component: {fileID: 14798078}
   - component: {fileID: 14798077}
   - component: {fileID: 14798079}
-  - component: {fileID: 14798080}
   - component: {fileID: 14798081}
   - component: {fileID: 14798082}
   - component: {fileID: 14798083}
@@ -315,12 +314,11 @@ MonoBehaviour:
   checkpointEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: be84e6526d6157d4aad00d1ed07d6a64, type: 2}
+    WwiseObjectReference: {fileID: 0}
   musicSound: {fileID: 14798085}
   rideSound: {fileID: 14798077}
   rideNoice: {fileID: 14798083}
   rideEnd: {fileID: 14798079}
-  checkPoint: {fileID: 14798080}
   boost: {fileID: 14798081}
   meta: {fileID: 14798082}
   lose: {fileID: 14798084}
@@ -535,103 +533,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &14798080
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14798075}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 3626ba5b4974d18409e5751749c5c3eb, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!82 &14798081
 AudioSource:
   m_ObjectHideFlags: 0
@@ -639,7 +540,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14798075}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -736,7 +637,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14798075}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -833,7 +734,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14798075}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -930,7 +831,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14798075}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -1159,7 +1060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CheckPoint
   gamemanager: {fileID: 166057888}
   isStop: 1
-  checkpointEvent:
+  CPEvent:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 29ac1942eb103b144a3220aefd2eeddb, type: 2}
@@ -2491,7 +2392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gamemanager
   levelDataBase: {fileID: 11400000, guid: 33cd9190f0fc2a04c8cf25eceb7ee524, type: 2}
-  checkpointEvent:
+  LoseEvent:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: c031e6c0f80b927458536ab75e33a5c3, type: 2}
@@ -4058,10 +3959,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CheckPoint
   gamemanager: {fileID: 166057888}
   isStop: 0
-  checkpointEvent:
+  CPEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 29ac1942eb103b144a3220aefd2eeddb, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: dc8f47b37d391934ab133e134e500bc2, type: 2}
   timeGain: 5
   particles:
   - {fileID: 671448487}
@@ -5880,7 +5781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0cd05ddc7f0e0a44ad6e3b41cbd4c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pingwin
-  PingwinEvent:
+  PenguinEvent:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
@@ -12651,10 +12552,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CheckPoint
   gamemanager: {fileID: 166057888}
   isStop: 0
-  checkpointEvent:
+  CPEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 29ac1942eb103b144a3220aefd2eeddb, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: dc8f47b37d391934ab133e134e500bc2, type: 2}
   timeGain: 5
   particles:
   - {fileID: 2061457187}
@@ -16191,22 +16092,6 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 166057888}
-        m_TargetAssemblyTypeName: Gamemanager, Assembly-CSharp
-        m_MethodName: OpenConsole
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: dacc58da-5625-40cf-bcdb-94f8162a1f32
-    m_ActionName: 'Player/Esc[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -28780,7 +28665,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed39f2b237e573f4f85990bb5d1440ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AK.Wwise.Unity.Addressables::AK.Wwise.Unity.WwiseAddressables.InitBankHolder
-  InitBank: {fileID: 0}
 --- !u!4 &1385719007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7978960153104458964, guid: 8c843d0550dd44eda8adfb470642bf77, type: 3}
@@ -29517,6 +29401,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 260627108570288190, guid: a7256cc29ee118e4fbe7b43c15ffb190, type: 3}
   m_PrefabInstance: {fileID: 1258502678}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1554698334
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1395605747347577159, guid: ac29037beaceeb74d8b7dba1dc4f2c24, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.93267
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395605747347577159, guid: ac29037beaceeb74d8b7dba1dc4f2c24, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.12645
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395605747347577159, guid: ac29037beaceeb74d8b7dba1dc4f2c24, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 76.65791
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395605747347577159, guid: ac29037beaceeb74d8b7dba1dc4f2c24, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395605747347577159, guid: ac29037beaceeb74d8b7dba1dc4f2c24, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395605747347577159, guid: ac29037beaceeb74d8b7dba1dc4f2c24, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395605747347577159, guid: ac29037beaceeb74d8b7dba1dc4f2c24, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395605747347577159, guid: ac29037beaceeb74d8b7dba1dc4f2c24, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395605747347577159, guid: ac29037beaceeb74d8b7dba1dc4f2c24, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395605747347577159, guid: ac29037beaceeb74d8b7dba1dc4f2c24, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723705569756920747, guid: ac29037beaceeb74d8b7dba1dc4f2c24, type: 3}
+      propertyPath: m_Name
+      value: AkBank
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac29037beaceeb74d8b7dba1dc4f2c24, type: 3}
 --- !u!1 &1558190090
 GameObject:
   m_ObjectHideFlags: 0
@@ -31468,7 +31409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0cd05ddc7f0e0a44ad6e3b41cbd4c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pingwin
-  PingwinEvent:
+  PenguinEvent:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
@@ -31838,7 +31779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0cd05ddc7f0e0a44ad6e3b41cbd4c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pingwin
-  PingwinEvent:
+  PenguinEvent:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
@@ -32218,7 +32159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0cd05ddc7f0e0a44ad6e3b41cbd4c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pingwin
-  PingwinEvent:
+  PenguinEvent:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 77b6163e28c967247b37a8bf152a5ef5, type: 2}
@@ -59751,3 +59692,4 @@ SceneRoots:
   - {fileID: 273361984}
   - {fileID: 1056135474}
   - {fileID: 1385629665}
+  - {fileID: 1554698334}
