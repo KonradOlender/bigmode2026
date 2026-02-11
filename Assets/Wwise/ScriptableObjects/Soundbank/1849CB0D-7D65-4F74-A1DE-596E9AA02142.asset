@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 990a128f4064d06439b757696b3555b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 66a66827b4841774c9792d89693c4de7, type: 3}
   m_Name: 1849CB0D-7D65-4F74-A1DE-596E9AA02142
   m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseBankReference
   objectName: SoundBankBob

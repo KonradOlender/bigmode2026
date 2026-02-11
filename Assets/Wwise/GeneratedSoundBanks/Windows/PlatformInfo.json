@@ -6,24 +6,24 @@
    "Generator": "2025.1.4.9062"
   },
   "RootPaths": {
-   "ProjectRoot": "../..",
-   "SourceFilesRoot": "../../.cache",
+   "ProjectRoot": "G:/BobslasyerAudio/BOBSlayer",
+   "SourceFilesRoot": "G:/BobslasyerAudio/BOBSlayer/.cache",
    "SoundBanksRoot": ".",
    "ExternalSourcesInputFile": "",
-   "ExternalSourcesOutputRoot": "."
+   "ExternalSourcesOutputRoot": "G:/BobslasyerAudio/BOBSlayer/GeneratedSoundBanks/Windows"
   },
   "DefaultAlign": "16",
   "Settings": {
-   "AutoSoundBankDefinition": "false",
+   "AutoSoundBankDefinition": "true",
    "CopyLooseStreamedMediaFiles": "true",
-   "SubFoldersForGeneratedFiles": "false",
+   "SubFoldersForGeneratedFiles": "true",
    "RemoveUnusedGeneratedFiles": "true",
    "SourceControlGeneratedFiles": "false",
-   "GenerateHeaderFile": "false",
+   "GenerateHeaderFile": "true",
    "GenerateContentTxtFile": "true",
    "GenerateMetadataXML": "false",
    "GenerateMetadataJSON": "true",
-   "GenerateAllBanksMetadata": "false",
+   "GenerateAllBanksMetadata": "true",
    "GeneratePerBankMetadata": "true",
    "UseSoundBankNames": "true",
    "AllowExceedingMaxSize": "false",
@@ -33,6 +33,6 @@
    "PrintObjectPath": "true",
    "PrintObjectColor": "true"
   },
-  "FileHash": "{4948B2A3-EF62-1A09-660C-3642B9D29920}"
+  "FileHash": "{95723E4F-C515-5A99-EF44-E6B26581D91B}"
  }
 }

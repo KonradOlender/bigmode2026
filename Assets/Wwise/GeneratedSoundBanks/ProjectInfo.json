@@ -5,7 +5,7 @@
    "GUID": "{25CCE324-8BC7-4B43-90CE-F533A66642FA}",
    "Generator": "2025.1.4.9062"
   },
-  "CacheRoot": "../.cache",
+  "CacheRoot": "G:/BobslasyerAudio/BOBSlayer/.cache",
   "Platforms": [
    {
     "Name": "Windows",
@@ -24,6 +24,6 @@
     "UseAsStandIn": "true"
    }
   ],
-  "FileHash": "{95FD7DF6-3A24-8344-D598-79E44EC91DEA}"
+  "FileHash": "{84300042-C7C0-A3DF-DB91-4C9F804EACB6}"
  }
 }
