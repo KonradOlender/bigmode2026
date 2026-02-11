@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Soundmanager : MonoBehaviour
 {
     public static Soundmanager Instance;
-         public AK.Wwise.Event checkpointEvent;
+         public AK.Wwise.Event MusicEvent;
 
 
     public AudioSource musicSound;
@@ -35,8 +35,7 @@ public class Soundmanager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //checkpointEvent.Post(gameObject);
-        musicSound.Play();
+        MusicEvent.Post(gameObject);
     }
 
     // Update is called once per frame
