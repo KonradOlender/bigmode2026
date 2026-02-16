@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ef33a3fe39d40e478e1c74e73716d99, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b97004f81458a34fabf3cfb622ac80c, type: 3}
   m_Name: Windows
   m_EditorClassIdentifier: AK.Wwise.Unity.API::AkWindowsSettings
   IgnorePropertyNameList: []
@@ -123,7 +123,7 @@ MonoBehaviour:
     m_IOMemorySize: 2097152
     m_TargetAutoStreamBufferLengthMs: 380
     m_UseStreamCache: 0
-    m_LoadBankAsynchronously: 1
+    m_LoadBankAsynchronously: 0
     m_MaximumPinnedBytesInCache: 4294967295
     m_EnableGameSyncPreparation: 0
     m_ContinuousPlaybackLookAhead: 1

@@ -7,7 +7,7 @@ public class CheckPoint : MonoBehaviour
     public Gamemanager gamemanager;
     public bool isStop;
 
-     public AK.Wwise.Event checkpointEvent;
+     public AK.Wwise.Event CPEvent;
 
     public float timeGain = 15;
     public List<ParticleSystem> particles;
@@ -40,16 +40,20 @@ public class CheckPoint : MonoBehaviour
 
     private void Checkpoint()
     {
-       checkpointEvent.Post(gameObject);
+       //checkpointEvent.Post(gameObject);
+
         gamemanager.AddTime(timeGain);
         foreach (var part in particles)
         {
             part.Play();
+              CPEvent.Post(gameObject);
         }
     }
     private void Stop()
     {
-        checkpointEvent.Post(gameObject);
+      
         gamemanager.Win();
+         CPEvent.Post(gameObject);
+
     }
 }

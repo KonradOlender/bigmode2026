@@ -1,19 +1,22 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Soundmanager : MonoBehaviour
 {
     public static Soundmanager Instance;
-         public AK.Wwise.Event checkpointEvent;
+         public AK.Wwise.Event MusicEvent;
 
 
     public AudioSource musicSound;
     public AudioSource rideSound;
     public AudioSource rideNoice;
     public AudioSource rideEnd;
-    public AudioSource checkPoint;
     public AudioSource boost;
     public AudioSource meta;
     public AudioSource lose;
+    public AudioSource pingwinHit;
+
+    public Slider musicVolume;
 
     private void Awake()
     {
@@ -32,15 +35,11 @@ public class Soundmanager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //checkpointEvent.Post(gameObject);
-        musicSound.Play();
+        MusicEvent.Post(gameObject);
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     public void RideSoundPlay()
     {
@@ -58,24 +57,8 @@ public class Soundmanager : MonoBehaviour
         rideEnd.Play();
     }
 
-    public void CheckPointPlay()
-    {
-        checkPoint.Play();
-    }
 
-    public void BoostPlay()
-    {
-        boost.Play();
-    }
-    public void metaPlay()
-    {
-        meta.Play();
-    }
 
-    public void LosePlay()
-    {
-        lose.Play();
-    }
 
 
 }

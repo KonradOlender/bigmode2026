@@ -4,11 +4,12 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using System;
 
 public class Gamemanager : MonoBehaviour
 {
     public DataBase levelDataBase;
-    public AK.Wwise.Event checkpointEvent;
+    public AK.Wwise.Event LoseEvent;
      public AK.Wwise.Event SliderEvent;
      public AK.Wwise.Event SliderDropEvent;
 
@@ -41,6 +42,8 @@ public class Gamemanager : MonoBehaviour
     [Header("Stats")]
     public TMP_Text timeLeftText;
     public TMP_Text topSpeedText;
+    public TMP_Text killedText;
+    private int currentKilled = 0;
 
 
     [Header("Events")]
@@ -71,7 +74,10 @@ public class Gamemanager : MonoBehaviour
 
         uiElementWinScreen.SetActive(false);
         uiElementFailedScreen.SetActive(false);
-        uiElementSpeedomater.SetActive(true);
+        uiElementSpeedomater.SetActive(false);
+        uiElementClock.SetActive(false);
+
+        pregameSlider.gameObject.SetActive(true);
         currentTime = timeLimit;
         timerText.text = "00:00";
 
@@ -183,6 +189,7 @@ public class Gamemanager : MonoBehaviour
     public void StartTimer()
     {
         uiElementClock.SetActive(true);
+        uiElementSpeedomater.SetActive(true);
         isTimerRunning = true;
         onTimerStart?.Invoke();
     }
@@ -216,11 +223,12 @@ public class Gamemanager : MonoBehaviour
     {
         if (!isFiled)
         {
-            Soundmanager.Instance.metaPlay();
             StopTimer();
-            topSpeedText.text = topSpeedText.text + topSpeed.ToString("F2");
+            topSpeedText.text = topSpeedText.text + ((float)Math.Round(topSpeed, 2)).ToString();
             timeLeftText.text = timeLeftText.text + GetFormattedTime();
+            killedText.text = killedText.text + currentKilled.ToString();
             uiElementClock.SetActive(false);
+            uiElementSpeedomater.SetActive(false);
             uiElementWinScreen.SetActive(true);
         }
         
@@ -229,22 +237,22 @@ public class Gamemanager : MonoBehaviour
     public void EndLevelBack()
     {
         Soundmanager.Instance.RideSoundStop();
-        levelDataBase.SetLevelData(true, "S", currentTime, topSpeed, 0);
+        levelDataBase.SetLevelData(true, "S", currentTime, GetFormattedTime(), (float)Math.Round(topSpeed, 2));
         SceneManager.LoadScene(0);
     }
     public void EndLevelNext(int levelIndex)
     {
         Soundmanager.Instance.RideSoundStop();
-        levelDataBase.SetLevelData(true, "S", currentTime, topSpeed, 0);
+        levelDataBase.SetLevelData(true, "S", currentTime, GetFormattedTime(), (float)Math.Round(topSpeed, 2));
         SceneManager.LoadScene(levelIndex);
     }
     public void Failed()
     {
-        Soundmanager.Instance.LosePlay();
         isFiled = true;
         uiElementClock.SetActive(false);
+        uiElementSpeedomater.SetActive(false);
         uiElementFailedScreen.SetActive(true);
-            checkpointEvent.Post(gameObject);
+            LoseEvent.Post(gameObject);
 
     }
 
@@ -264,8 +272,16 @@ public class Gamemanager : MonoBehaviour
 
     public void LoadScene(int sceneIndex)
     {
+        SliderEvent.Stop(gameObject);
         SceneManager.LoadScene(sceneIndex);
     }
 
-    
+    public void AddPingwinKilled()
+    {
+        currentKilled += 1;
+        levelDataBase.AddPingwinKilled(1);
+    }
+
+
+
 }

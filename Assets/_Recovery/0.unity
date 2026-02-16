@@ -231,8 +231,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b2508e816caa3a4c8641e9c4adcf873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Soundmanager
+  checkpointEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  musicSound: {fileID: 0}
   rideSound: {fileID: 14798077}
+  rideNoice: {fileID: 0}
   rideEnd: {fileID: 14798079}
+  checkPoint: {fileID: 0}
+  boost: {fileID: 0}
+  meta: {fileID: 0}
+  lose: {fileID: 0}
 --- !u!82 &14798077
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1647,6 +1657,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gamemanager
   levelDataBase: {fileID: 11400000, guid: 33cd9190f0fc2a04c8cf25eceb7ee524, type: 2}
+  checkpointEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  SliderEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  SliderDropEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   ball: {fileID: 1024582197}
   timeLimit: 15
   isPreGame: 1
@@ -4273,6 +4295,8 @@ MonoBehaviour:
   speed: 15
   playerRB: {fileID: 1024582192}
   boostForce: 3
+  model: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!4 &544599672
 Transform:
   m_ObjectHideFlags: 0
@@ -13357,10 +13381,6 @@ MonoBehaviour:
   resetPosition: {fileID: 0}
   animator: {fileID: 1318259466}
   isBoostingCooldown: 1.5
-  movementSoundEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a0697eb92d2e17c4ca1564c4c8578202, type: 2}
 --- !u!114 &1024582198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25967,6 +25987,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1385629665}
   - component: {fileID: 1385629664}
+  - component: {fileID: 1385629666}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -26014,6 +26035,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1385629666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385629663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed39f2b237e573f4f85990bb5d1440ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.Addressables::AK.Wwise.Unity.WwiseAddressables.InitBankHolder
+  InitBank: {fileID: 0}
 --- !u!4 &1385719007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7978960153104458964, guid: 8c843d0550dd44eda8adfb470642bf77, type: 3}
@@ -28253,6 +28287,8 @@ MonoBehaviour:
   speed: 15
   playerRB: {fileID: 1024582192}
   boostForce: 3
+  model: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!4 &1719433799
 Transform:
   m_ObjectHideFlags: 0
@@ -28616,6 +28652,8 @@ MonoBehaviour:
   speed: 5
   playerRB: {fileID: 0}
   boostForce: 3
+  model: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!1001 &1779992034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28856,6 +28894,8 @@ MonoBehaviour:
   speed: 5
   playerRB: {fileID: 1024582192}
   boostForce: 3
+  model: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!136 &1817061128
 CapsuleCollider:
   m_ObjectHideFlags: 0
