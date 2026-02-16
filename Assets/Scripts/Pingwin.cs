@@ -3,6 +3,7 @@ using UnityEngine;
 public class Pingwin : MonoBehaviour
 {
          public AK.Wwise.Event PenguinEvent;
+         public AK.Wwise.Event PenguinTalkEvent;
 
     public Rigidbody rb;
     public float speed = 5;
@@ -18,6 +19,7 @@ public class Pingwin : MonoBehaviour
     void Start()
     {
         //rb = GetComponent<Rigidbody>();
+        PenguinTalkEvent.Post(gameObject);
     }
 
     // Update is called once per frame

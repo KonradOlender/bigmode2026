@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1849CB0D-7D65-4F74-A1DE-596E9AA02142}",
     "Language": "SFX",
-    "Hash": "{1CB263ED-3340-30B0-518E-F71B6080D66A}",
+    "Hash": "{A88F4788-A2F3-D035-45C2-3AD1895A3EAF}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SoundBankBob",
     "ShortName": "SoundBankBob",
     "Path": "SoundBankBob.bnk",
@@ -21,7 +21,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Music.wav",
-      "CachePath": "15/{15F22EA1-EC8F-000B-16D5-685CD5664C82}.wem"
+      "CachePath": "3C/{3C22E61C-B2AD-5F25-4B88-3F75594D8D7B}.wem"
      },
      {
       "Id": "79073991",
@@ -29,7 +29,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Checkpoint.wav",
-      "CachePath": "6D/{6DFF8E77-4E9D-8A02-1518-F80A85BE9E6E}.wem"
+      "CachePath": "E5/{E58B28DC-EA2A-5A7D-62CF-09FFC04C33EC}.wem"
      },
      {
       "Id": "101389195",
@@ -53,7 +53,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RiserDrop.wav",
-      "CachePath": "06/{06E12F5C-C5D2-EA23-5DF1-55F13402D5E6}.wem"
+      "CachePath": "D1/{D1C726DF-DB21-F450-2492-48A3EB41D0D8}.wem"
      },
      {
       "Id": "321706249",
@@ -93,7 +93,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Speedup.wav",
-      "CachePath": "E6/{E651EB63-E40A-49E2-43A7-2AD422371920}.wem"
+      "CachePath": "E1/{E15A67EE-C740-1D27-891A-F0D98A30BA1E}.wem"
      },
      {
       "Id": "734714370",
@@ -125,7 +125,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "penguin_slice1.wav",
-      "CachePath": "DD/{DDA702B9-C213-5142-EFDB-19F77082C3C5}.wem"
+      "CachePath": "29/{29F1B933-1188-FCDC-B517-5FA54E919DEA}.wem"
      },
      {
       "Id": "902394561",
@@ -142,6 +142,14 @@
       "Location": "Memory",
       "ShortName": "Footsteps, Human, Tile, Run SND62090.wav",
       "CachePath": "2B/{2BF5FB04-3BA2-3164-23BD-8FA341FFDD30}.wem"
+     },
+     {
+      "Id": "914134723",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "NHU05100192.wav",
+      "CachePath": "70/{7030DA6B-2A87-481C-9B12-7AA01DF49503}.wem"
      },
      {
       "Id": "947742990",
@@ -201,11 +209,11 @@
      {
       "Id": "2962822744",
       "Name": "Play_Checkpoint",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_Checkpoint",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_Checkpoint",
       "GUID": "{CC71AFD2-BBF8-4EC9-90F6-785D3C3773E7}",
       "DurationType": "OneShot",
-      "DurationMin": "3.7213688",
-      "DurationMax": "4.5551543",
+      "DurationMin": "1.6770117",
+      "DurationMax": "2.052752",
       "MediaRefs": [
        {
         "Id": "79073991"
@@ -257,7 +265,7 @@
      {
       "Id": "1647486249",
       "Name": "Play_Meta",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_Meta",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_Meta",
       "GUID": "{37835323-F328-4074-86BC-1AB4AE8FADEE}",
       "DurationType": "OneShot",
       "DurationMin": "9",
@@ -273,9 +281,7 @@
       "Name": "Play_Music",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Music",
       "GUID": "{8EC4A120-876A-4FB5-A6FA-3BFC69E6E2E4}",
-      "DurationType": "OneShot",
-      "DurationMin": "88.615395",
-      "DurationMax": "88.615395",
+      "DurationType": "Infinite",
       "MediaRefs": [
        {
         "Id": "65906973"
@@ -285,14 +291,27 @@
      {
       "Id": "3205633465",
       "Name": "Play_Penguin_Slice",
-      "ObjectPath": "\\Events\\Default Work Unit\\PIngwinSlice\\Play_Penguin_Slice",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\PIngwinSlice\\Play_Penguin_Slice",
       "GUID": "{46972AB6-EF4F-4B92-B3F7-1B13189E198A}",
       "DurationType": "OneShot",
-      "DurationMin": "2.575685",
-      "DurationMax": "3.063023",
+      "DurationMin": "0.93962765",
+      "DurationMax": "1.117412",
       "MediaRefs": [
        {
         "Id": "897386478"
+       }
+      ]
+     },
+     {
+      "Id": "2314768024",
+      "Name": "Play_penguintalk",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_penguintalk",
+      "GUID": "{DF6F33D0-872D-4A05-8FF9-B42EA0D641A4}",
+      "MaxAttenuation": "20",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "914134723"
        }
       ]
      },
@@ -327,7 +346,7 @@
      {
       "Id": "300418833",
       "Name": "Play_risernew",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_risernew",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_risernew",
       "GUID": "{F2E76AF9-23F3-41B8-A2C1-05C140BC0AEE}",
       "DurationType": "Infinite",
       "MediaRefs": [
@@ -362,11 +381,11 @@
      {
       "Id": "2164775684",
       "Name": "Play_Speedup",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_Speedup",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_Speedup",
       "GUID": "{9DB74368-40F1-4394-9B57-AAD9A7FA0CDD}",
       "DurationType": "OneShot",
-      "DurationMin": "2.446916",
-      "DurationMax": "2.446916",
+      "DurationMin": "1.5384754",
+      "DurationMax": "1.5384754",
       "MediaRefs": [
        {
         "Id": "702913062"
@@ -398,6 +417,6 @@
     ]
    }
   ],
-  "FileHash": "{A41C582C-3716-BAF8-2DBE-51510B965A3C}"
+  "FileHash": "{B0817D8E-FB59-7726-DF1C-2A79CA5C71DD}"
  }
 }

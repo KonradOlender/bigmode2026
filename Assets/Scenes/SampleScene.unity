@@ -5818,6 +5818,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+  PenguinTalkEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   rb: {fileID: 0}
   speed: 15
   playerRB: {fileID: 1024582192}
@@ -15845,6 +15849,7 @@ GameObject:
   - component: {fileID: 1024582191}
   - component: {fileID: 1024582197}
   - component: {fileID: 1024582198}
+  - component: {fileID: 1024582199}
   m_Layer: 7
   m_Name: Sphere
   m_TagString: Player
@@ -16130,6 +16135,29 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1024582199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024582190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ad31b8727dff040b9babea07365756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wind
+  movementEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c018f0ecc1363c0408f83b015d37fbab, type: 2}
+  speedRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2c0919e5fc96a2347a668f0809449f02, type: 2}
+  maxSpeed: 40
+  playOnStart: 1
+  normalizeTo100: 0
 --- !u!4 &1028058625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4123955546364383418, guid: fcad92be47c7d4b41b9cca941c43fa9b, type: 3}
@@ -31516,6 +31544,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+  PenguinTalkEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   rb: {fileID: 0}
   speed: 15
   playerRB: {fileID: 1024582192}
@@ -31883,6 +31915,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pingwin
   PenguinEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  PenguinTalkEvent:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
@@ -32266,6 +32302,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 730329c8d875cf64f9877a57395bc734, type: 2}
+  PenguinTalkEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   rb: {fileID: 0}
   speed: 5
   playerRB: {fileID: 1024582192}
