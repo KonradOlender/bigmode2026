@@ -46,7 +46,7 @@ public class AkState : AkDragDropTriggerHandler
 
 	public override void HandleEvent(UnityEngine.GameObject in_gameObject)
 	{
-		data.SetValue();
+		data.SetValue(in_gameObject);
 	}
 
 	#region Obsolete

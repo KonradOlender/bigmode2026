@@ -15,6 +15,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3040692703	Play_Bobsleigh_Move			\Default Work Unit\Play_Bobsleigh_Move	
 	3205633465	Play_Penguin_Slice			\Default Work Unit\SFX\PIngwinSlice\Play_Penguin_Slice	
 	3206947759	Play_Turn			\Default Work Unit\Play_Turn	
+	3357254901	Play_TIME			\Default Work Unit\Play_TIME	
 	3689126666	Play_Jump			\Default Work Unit\Play_Jump	
 	3796466245	Play_Lose			\Default Work Unit\Play_Lose	
 
@@ -28,6 +29,7 @@ State	ID	Name	State Group			Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	640949982	Speed			\Default Work Unit\Speed	
+	2486342905	TimeLeft			\Default Work Unit\TimeLeft	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
@@ -38,6 +40,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	6252285	Music	.cache\3C\{3C22E61C-B2AD-5F25-4B88-3F75594D8D7B}.wem		\Containers\Default Work Unit\Music		15631852
 	79073991	Checkpoint	.cache\EF\{EFA5E326-0B3F-27F3-AD83-F68AE058E55A}.wem		\Containers\Default Work Unit\SFX\Checkpoint		318072
 	101389195	Riser	.cache\7A\{7AA8C77F-9D7C-A7B1-95C6-4BDF8D39A4DC}.wem		\Containers\Default Work Unit\Riser		1985544
+	148056745	TIME	.cache\C0\{C0A4F203-E89A-F9F2-48BA-4B0E01A03156}.wem		\Containers\Default Work Unit\TIME		361020
 	186246000	Ambient_Loop	.cache\EC\{ECA4AFD4-2599-A65C-CB6B-4F0F8923310B}.wem		\Containers\Default Work Unit\Bobsleigh_Move\Ambient_Loop		2744012
 	234400434	RiserDrop	.cache\D1\{D1C726DF-DB21-F450-2492-48A3EB41D0D8}.wem		\Containers\Default Work Unit\SFX\RiserDrop		610784
 	321706249	Fall	.cache\BE\{BE257C85-A71D-E7C4-C5F5-69049DD4CCA2}.wem		\Containers\Default Work Unit\Fall		120984

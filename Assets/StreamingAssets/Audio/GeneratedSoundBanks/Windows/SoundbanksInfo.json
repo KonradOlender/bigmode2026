@@ -18,7 +18,7 @@
     "Type": "User",
     "GUID": "{1849CB0D-7D65-4F74-A1DE-596E9AA02142}",
     "Language": "SFX",
-    "Hash": "{000A678A-4AEB-6B53-5EF0-8EDAECF3E83F}",
+    "Hash": "{FCA0AB67-A10C-4E55-C0A9-C2524B631405}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SoundBankBob",
     "ShortName": "SoundBankBob",
     "Path": "SoundBankBob.bnk",
@@ -46,6 +46,14 @@
       "Location": "Memory",
       "ShortName": "riser.wav",
       "CachePath": "7A/{7AA8C77F-9D7C-A7B1-95C6-4BDF8D39A4DC}.wem"
+     },
+     {
+      "Id": "148056745",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "TIME.wav",
+      "CachePath": "C0/{C0A4F203-E89A-F9F2-48BA-4B0E01A03156}.wem"
      },
      {
       "Id": "186246000",
@@ -446,6 +454,18 @@
       ]
      },
      {
+      "Id": "3357254901",
+      "Name": "Play_TIME",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_TIME",
+      "GUID": "{3B910D6C-A683-4D44-9D25-D448CC546E66}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "148056745"
+       }
+      ]
+     },
+     {
       "Id": "3206947759",
       "Name": "Play_Turn",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Turn",
@@ -486,6 +506,12 @@
       "Name": "Speed",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Speed",
       "GUID": "{E127D17C-FDC3-4D0B-A31F-ED3E37D35B58}"
+     },
+     {
+      "Id": "2486342905",
+      "Name": "TimeLeft",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\TimeLeft",
+      "GUID": "{609B564C-2613-4E67-8C0E-DAE784ACE20A}"
      }
     ]
    },
@@ -494,7 +520,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{90832937-ED19-3BF5-9680-85951742968E}",
+    "Hash": "{06CC2CF4-3A95-2F98-A686-BC45EFECC850}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -562,6 +588,12 @@
       "Name": "SS_Air_Fear",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Fear",
       "GUID": "{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"
+     },
+     {
+      "Id": "2486342905",
+      "Name": "TimeLeft",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\TimeLeft",
+      "GUID": "{609B564C-2613-4E67-8C0E-DAE784ACE20A}"
      },
      {
       "Id": "2648548617",
@@ -1113,6 +1145,6 @@
     ]
    }
   ],
-  "FileHash": "{6CAEBEC5-81C1-9695-8DE6-17F521610FE7}"
+  "FileHash": "{9E3FC503-A919-B8A2-FFB0-81CAF1B85490}"
  }
 }

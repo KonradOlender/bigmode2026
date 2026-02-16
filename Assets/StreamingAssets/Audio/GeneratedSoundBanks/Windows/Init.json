@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{3FA876F4-BE54-030E-85F8-636213BBAE58}",
+    "Hash": "{06CC2CF4-3A95-2F98-A686-BC45EFECC850}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -80,6 +80,12 @@
       "GUID": "{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"
      },
      {
+      "Id": "2486342905",
+      "Name": "TimeLeft",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\TimeLeft",
+      "GUID": "{609B564C-2613-4E67-8C0E-DAE784ACE20A}"
+     },
+     {
       "Id": "2648548617",
       "Name": "SS_Air_Month",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Month",
@@ -120,6 +126,34 @@
       "Name": "SS_Air_Turbulence",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Turbulence",
       "GUID": "{EDA87B19-73AA-40A0-9F19-2073606DB710}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "1855035714",
+      "Name": "OnScreen",
+      "ObjectPath": "\\States\\Default Work Unit\\OnScreen",
+      "GUID": "{6A0B2B02-6B34-4572-B457-4A7E6CE8EACC}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\OnScreen\\None",
+        "GUID": "{8D799F3F-476F-4802-9D3B-CF41ABE8B3BA}"
+       },
+       {
+        "Id": "930712164",
+        "Name": "OFF",
+        "ObjectPath": "\\States\\Default Work Unit\\OnScreen\\OFF",
+        "GUID": "{4D1F8D4D-524C-4457-810D-9D091214FBEA}"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "ON",
+        "ObjectPath": "\\States\\Default Work Unit\\OnScreen\\ON",
+        "GUID": "{1A709426-B172-4999-B7C4-F194A05F1061}"
+       }
+      ]
      }
     ],
     "AcousticTextures": [
@@ -601,6 +635,6 @@
     ]
    }
   ],
-  "FileHash": "{271324BF-BDE9-2496-A79E-C20B06D6962C}"
+  "FileHash": "{9EDA426F-61F8-05E2-A5EC-32885EF72D3D}"
  }
 }

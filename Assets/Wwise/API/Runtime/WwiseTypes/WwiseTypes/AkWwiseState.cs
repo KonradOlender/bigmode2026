@@ -17,6 +17,8 @@ Copyright (c) 2025 Audiokinetic Inc.
 
 #if !(UNITY_QNX) // Disable under unsupported platforms.
 
+using System;
+
 namespace AK.Wwise
 {
 	[System.Serializable]
@@ -34,7 +36,7 @@ namespace AK.Wwise
 		public override WwiseObjectType WwiseObjectType { get { return WwiseObjectType.State; } }
 		public override WwiseObjectType WwiseObjectGroupType { get { return WwiseObjectType.StateGroup; } }
 
-		public void SetValue()
+		public void SetValue(string v)
 		{
 			if (IsValid())
 			{
@@ -42,6 +44,16 @@ namespace AK.Wwise
 				Verify(result);
 			}
 		}
-	}
+
+        public void SetValue(UnityEngine.GameObject gameObject)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetValue()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
 #endif // #if !(UNITY_QNX) // Disable under unsupported platforms.

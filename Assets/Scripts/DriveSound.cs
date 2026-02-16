@@ -8,8 +8,6 @@ public class DriveSound : MonoBehaviour
     public AK.Wwise.RTPC speedRTPC; // Assign the RTPC for speed in the Inspector
     public LayerMask groundLayer; // Assign the Ground layer in the Inspector
     public float distanceTolerance = 0.5f; // Tolerance for proximity to the ground
-    public AK.Wwise.State stateOn; // Slot for the Wwise ON state
-    public AK.Wwise.State stateOff; // Slot for the Wwise OFF state
 
     private bool isTouchingGround = false;
     private Rigidbody rb;
@@ -50,21 +48,6 @@ public class DriveSound : MonoBehaviour
 
             isTouchingGround = false;
         }
-
-        // Check UI elements from Gamemanager to set Wwise states
-        GameObject winScreen = GameObject.Find("UI Element Win Screen");
-        GameObject failedScreen = GameObject.Find("UI Element Failed Screen");
-        GameObject uiMenu = GameObject.Find("Uimenu");
-        
-        if ((winScreen != null && winScreen.activeInHierarchy) ||
-            (failedScreen != null && failedScreen.activeInHierarchy) ||
-            (uiMenu != null && uiMenu.activeInHierarchy))
-        {
-            stateOff.SetValue();
-        }
-        else
-        {
-            stateOn.SetValue();
-        }
+     
     }
 }
