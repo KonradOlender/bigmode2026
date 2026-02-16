@@ -22,6 +22,7 @@ namespace AK
         static const AkUniqueID PLAY_META = 1647486249U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_PENGUIN_SLICE = 3205633465U;
+        static const AkUniqueID PLAY_PENGUINTALK = 2314768024U;
         static const AkUniqueID PLAY_RISER = 1163161249U;
         static const AkUniqueID PLAY_RISERDROP = 2881812974U;
         static const AkUniqueID PLAY_RISERNEW = 300418833U;
@@ -54,6 +55,8 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES
