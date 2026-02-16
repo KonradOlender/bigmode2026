@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b7abd056c8b3043a1353a70f153024, type: 3}
+  m_Name: 6A0B2B02-6B34-4572-B457-4A7E6CE8EACC
+  m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseStateGroupReference
+  objectName: OnScreen
+  id: 1855035714
+  guid: 6A0B2B02-6B34-4572-B457-4A7E6CE8EACC

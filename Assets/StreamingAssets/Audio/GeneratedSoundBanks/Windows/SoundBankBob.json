@@ -1,0 +1,487 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "69303289",
+    "Type": "User",
+    "GUID": "{1849CB0D-7D65-4F74-A1DE-596E9AA02142}",
+    "Language": "SFX",
+    "Hash": "{000A678A-4AEB-6B53-5EF0-8EDAECF3E83F}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\SoundBankBob",
+    "ShortName": "SoundBankBob",
+    "Path": "SoundBankBob.bnk",
+    "Media": [
+     {
+      "Id": "6252285",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Music.wav",
+      "CachePath": "3C/{3C22E61C-B2AD-5F25-4B88-3F75594D8D7B}.wem"
+     },
+     {
+      "Id": "79073991",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Checkpoint.wav",
+      "CachePath": "EF/{EFA5E326-0B3F-27F3-AD83-F68AE058E55A}.wem"
+     },
+     {
+      "Id": "101389195",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "riser.wav",
+      "CachePath": "7A/{7AA8C77F-9D7C-A7B1-95C6-4BDF8D39A4DC}.wem"
+     },
+     {
+      "Id": "186246000",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Sports, Winter, Bob Sleigh, On Board, Driving, Metal Rattle, Hollow, Stop 03 SND5194 3.wav",
+      "CachePath": "EC/{ECA4AFD4-2599-A65C-CB6B-4F0F8923310B}.wem"
+     },
+     {
+      "Id": "234400434",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RiserDrop.wav",
+      "CachePath": "D1/{D1C726DF-DB21-F450-2492-48A3EB41D0D8}.wem"
+     },
+     {
+      "Id": "321706249",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Fight, Bodyfall, Combat Throw, Grab And Throw, Bodyfall On Hard Surface SND117404 2.wav",
+      "CachePath": "BE/{BE257C85-A71D-E7C4-C5F5-69049DD4CCA2}.wem"
+     },
+     {
+      "Id": "351980496",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Objects, Luggage, Suitcase, Fall Over SND18419.wav",
+      "CachePath": "87/{87DA6E31-EBDE-8FF4-8D3A-358B1F89183C}.wem"
+     },
+     {
+      "Id": "407263779",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps, Human, Tile, Run SND62090.wav",
+      "CachePath": "7D/{7DECA80F-FEEE-6372-7FFC-EAADC9DEC9B2}.wem"
+     },
+     {
+      "Id": "436744132",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Lose.wav",
+      "CachePath": "1D/{1DC1572A-A932-7D40-0616-A72D51728F36}.wem"
+     },
+     {
+      "Id": "537572852",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RideSound1B.wav",
+      "CachePath": "0C/{0C96C196-4029-1CED-6D13-F38CF3AF39CB}.wem"
+     },
+     {
+      "Id": "702913062",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Speedup.wav",
+      "CachePath": "53/{53F34A4C-CCAE-4BD5-54B1-FE388436BAE7}.wem"
+     },
+     {
+      "Id": "734714370",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps, Human, Tile, Run SND62090.wav",
+      "CachePath": "C1/{C1AB5717-4D6F-1B0C-5B0A-BE868DBAC6D8}.wem"
+     },
+     {
+      "Id": "833998127",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "meta.wav",
+      "CachePath": "52/{52F3973E-F9EC-5ABD-C45D-4192EF2688A5}.wem"
+     },
+     {
+      "Id": "834813033",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "risernew.wav",
+      "CachePath": "63/{631E1924-1580-1FE1-2D77-13F92585FF4F}.wem"
+     },
+     {
+      "Id": "897386478",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "penguin_slice1.wav",
+      "CachePath": "E8/{E8E06E29-F2A3-D6B1-2F10-CE2EC7F3EFA7}.wem"
+     },
+     {
+      "Id": "902394561",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "band_hit.wav",
+      "CachePath": "BB/{BB2B22AE-B73A-33D5-BF40-BAF7F7112DEB}.wem"
+     },
+     {
+      "Id": "910831133",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps, Human, Tile, Run SND62090.wav",
+      "CachePath": "2B/{2BF5FB04-3BA2-3164-23BD-8FA341FFDD30}.wem"
+     },
+     {
+      "Id": "914134723",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "NHU05100192.wav",
+      "CachePath": "44/{44C8FBC8-5B70-7962-0180-FF54D118CF24}.wem"
+     },
+     {
+      "Id": "947742990",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Turn.wav",
+      "CachePath": "DB/{DB2E85FA-D08F-95AE-3F6E-514FBCA76E5C}.wem"
+     },
+     {
+      "Id": "953002080",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Swooshes, Whoosh, Classic, Normal SND55544.wav",
+      "CachePath": "9D/{9DA5E86C-824B-6593-711E-3BF300AF9E74}.wem"
+     },
+     {
+      "Id": "983774758",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Footsteps, Human, Tile, Run SND62090.wav",
+      "CachePath": "2E/{2E08C39C-7767-B545-4B94-27AC0DAA00BD}.wem"
+     },
+     {
+      "Id": "1029221817",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "noise.wav",
+      "CachePath": "64/{64E34E96-0298-D385-E6B6-694C903D0393}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1570834349",
+      "Name": "Play_Band_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Band_Hit",
+      "GUID": "{1D8BBD5D-41C2-4B16-B9C1-ACA0B3F54ED3}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6452117",
+      "DurationMax": "1.2179976",
+      "MediaRefs": [
+       {
+        "Id": "902394561"
+       }
+      ]
+     },
+     {
+      "Id": "3040692703",
+      "Name": "Play_Bobsleigh_Move",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Bobsleigh_Move",
+      "GUID": "{6C028061-D312-4B90-BFE5-66B990EE5A11}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "186246000"
+       },
+       {
+        "Id": "1029221817"
+       }
+      ]
+     },
+     {
+      "Id": "2962822744",
+      "Name": "Play_Checkpoint",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_Checkpoint",
+      "GUID": "{CC71AFD2-BBF8-4EC9-90F6-785D3C3773E7}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.6770117",
+      "DurationMax": "2.052752",
+      "MediaRefs": [
+       {
+        "Id": "79073991"
+       }
+      ]
+     },
+     {
+      "Id": "2712047697",
+      "Name": "Play_Fall",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Fall",
+      "GUID": "{8B088091-B2C8-455E-B71F-738D3AC6B613}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6296354",
+      "DurationMax": "0.6296354",
+      "MediaRefs": [
+       {
+        "Id": "321706249"
+       }
+      ]
+     },
+     {
+      "Id": "3689126666",
+      "Name": "Play_Jump",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Jump",
+      "GUID": "{EDABB6D2-3226-4BF3-B399-EA6FE37D9268}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.66242146",
+      "DurationMax": "0.66242146",
+      "MediaRefs": [
+       {
+        "Id": "947742990"
+       },
+       {
+        "Id": "953002080"
+       }
+      ]
+     },
+     {
+      "Id": "2708038592",
+      "Name": "Play_Jump_In",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Jump_In",
+      "GUID": "{A74AAF8C-B274-470B-83A6-124B665D807E}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.58770835",
+      "DurationMax": "0.58770835",
+      "MediaRefs": [
+       {
+        "Id": "351980496"
+       }
+      ]
+     },
+     {
+      "Id": "3796466245",
+      "Name": "Play_Lose",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Lose",
+      "GUID": "{2D3A7460-A7C4-40A9-92B3-D9DDCF5F2F17}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.5",
+      "DurationMax": "2.5",
+      "MediaRefs": [
+       {
+        "Id": "436744132"
+       }
+      ]
+     },
+     {
+      "Id": "1647486249",
+      "Name": "Play_Meta",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_Meta",
+      "GUID": "{37835323-F328-4074-86BC-1AB4AE8FADEE}",
+      "DurationType": "OneShot",
+      "DurationMin": "9",
+      "DurationMax": "9",
+      "MediaRefs": [
+       {
+        "Id": "833998127"
+       }
+      ]
+     },
+     {
+      "Id": "2932040671",
+      "Name": "Play_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Music",
+      "GUID": "{8EC4A120-876A-4FB5-A6FA-3BFC69E6E2E4}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "6252285"
+       }
+      ]
+     },
+     {
+      "Id": "3205633465",
+      "Name": "Play_Penguin_Slice",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\PIngwinSlice\\Play_Penguin_Slice",
+      "GUID": "{46972AB6-EF4F-4B92-B3F7-1B13189E198A}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.93962765",
+      "DurationMax": "1.117412",
+      "MediaRefs": [
+       {
+        "Id": "897386478"
+       }
+      ]
+     },
+     {
+      "Id": "2314768024",
+      "Name": "Play_penguintalk",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_penguintalk",
+      "GUID": "{DF6F33D0-872D-4A05-8FF9-B42EA0D641A4}",
+      "MaxAttenuation": "20",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "914134723"
+       }
+      ]
+     },
+     {
+      "Id": "2789270884",
+      "Name": "Play_RideSound1B",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_RideSound1B",
+      "GUID": "{2EBD8F85-BE99-4A0A-9602-6BDEF123A02B}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "537572852"
+       }
+      ]
+     },
+     {
+      "Id": "1163161249",
+      "Name": "Play_Riser",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Riser",
+      "GUID": "{CA3045EB-1B7C-4BED-BCAD-F3FEFF476E9F}",
+      "DurationType": "OneShot",
+      "DurationMin": "11.255374",
+      "DurationMax": "11.255374",
+      "MediaRefs": [
+       {
+        "Id": "101389195"
+       }
+      ]
+     },
+     {
+      "Id": "2881812974",
+      "Name": "Play_RiserDrop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_RiserDrop",
+      "GUID": "{EF6672CF-D4E0-49AB-BCAF-D090282A0F47}",
+      "DurationType": "OneShot",
+      "DurationMin": "3.4619536",
+      "DurationMax": "3.4619536",
+      "MediaRefs": [
+       {
+        "Id": "234400434"
+       }
+      ]
+     },
+     {
+      "Id": "300418833",
+      "Name": "Play_risernew",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_risernew",
+      "GUID": "{F2E76AF9-23F3-41B8-A2C1-05C140BC0AEE}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "834813033"
+       }
+      ]
+     },
+     {
+      "Id": "2822207957",
+      "Name": "Play_Run",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Run",
+      "GUID": "{22D19B2D-41DC-48B6-9646-8B61B19C76F4}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.06737297",
+      "DurationMax": "0.22998956",
+      "MediaRefs": [
+       {
+        "Id": "407263779"
+       },
+       {
+        "Id": "734714370"
+       },
+       {
+        "Id": "910831133"
+       },
+       {
+        "Id": "983774758"
+       }
+      ]
+     },
+     {
+      "Id": "2164775684",
+      "Name": "Play_Speedup",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_Speedup",
+      "GUID": "{9DB74368-40F1-4394-9B57-AAD9A7FA0CDD}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5384754",
+      "DurationMax": "1.5384754",
+      "MediaRefs": [
+       {
+        "Id": "702913062"
+       }
+      ]
+     },
+     {
+      "Id": "3206947759",
+      "Name": "Play_Turn",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Turn",
+      "GUID": "{17058259-CB2A-457E-9EBF-ACDEFC2104D4}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.66242146",
+      "DurationMax": "0.66242146",
+      "MediaRefs": [
+       {
+        "Id": "947742990"
+       }
+      ]
+     }
+    ],
+    "Busses": [
+     {
+      "Id": "393239870",
+      "Name": "SFX",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Master Audio Bus\\SFX",
+      "GUID": "{08D76077-9E85-4F47-90CF-55AFCAB9BBA9}"
+     },
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     },
+     {
+      "Id": "3991942870",
+      "Name": "Music",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Master Audio Bus\\Music",
+      "GUID": "{A055546D-2C4A-4309-8360-506C6DB010E9}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "640949982",
+      "Name": "Speed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Speed",
+      "GUID": "{E127D17C-FDC3-4D0B-A31F-ED3E37D35B58}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{70985231-F5AE-16C7-DC06-E3AA0FC98386}"
+ }
+}

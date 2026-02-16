@@ -9,10 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: 1a847d80babafb34d85ce8be44d8a9f2, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: df474f53a8bdd2c42a648ca199c5034f, type: 3}
+>>>>>>> Stashed changes
   m_Name: 1D8BBD5D-41C2-4B16-B9C1-ACA0B3F54ED3
   m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseEventReference
   objectName: Play_Band_Hit
   id: 1570834349
   guid: 1D8BBD5D-41C2-4B16-B9C1-ACA0B3F54ED3
+<<<<<<< Updated upstream
   IsInUserDefinedSoundBank: 0
+=======
+  IsInUserDefinedSoundBank: 1
+>>>>>>> Stashed changes

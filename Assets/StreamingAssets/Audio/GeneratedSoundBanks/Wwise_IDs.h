@@ -17,11 +17,17 @@ namespace AK
         static const AkUniqueID PLAY_BOBSLEIGH_MOVE = 3040692703U;
         static const AkUniqueID PLAY_CHECKPOINT = 2962822744U;
         static const AkUniqueID PLAY_FALL = 2712047697U;
+        static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_JUMP_IN = 2708038592U;
         static const AkUniqueID PLAY_LOSE = 3796466245U;
         static const AkUniqueID PLAY_META = 1647486249U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_PENGUIN_SLICE = 3205633465U;
+<<<<<<< Updated upstream
+=======
+        static const AkUniqueID PLAY_PENGUINTALK = 2314768024U;
+        static const AkUniqueID PLAY_RIDESOUND1B = 2789270884U;
+>>>>>>> Stashed changes
         static const AkUniqueID PLAY_RISER = 1163161249U;
         static const AkUniqueID PLAY_RISERDROP = 2881812974U;
         static const AkUniqueID PLAY_RISERNEW = 300418833U;
@@ -29,6 +35,22 @@ namespace AK
         static const AkUniqueID PLAY_SPEEDUP = 2164775684U;
         static const AkUniqueID PLAY_TURN = 3206947759U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace ONSCREEN
+        {
+            static const AkUniqueID GROUP = 1855035714U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID OFF = 930712164U;
+                static const AkUniqueID ON = 1651971902U;
+            } // namespace STATE
+        } // namespace ONSCREEN
+
+    } // namespace STATES
 
     namespace GAME_PARAMETERS
     {
