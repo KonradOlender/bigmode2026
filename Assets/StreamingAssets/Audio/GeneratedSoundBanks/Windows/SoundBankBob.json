@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1849CB0D-7D65-4F74-A1DE-596E9AA02142}",
     "Language": "SFX",
-    "Hash": "{17B5A08A-AB7C-7A24-49A8-7EDF2F09A722}",
+    "Hash": "{4E544C8C-6ECB-B0E4-BE1A-0EFD3410D7EF}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SoundBankBob",
     "ShortName": "SoundBankBob",
     "Path": "SoundBankBob.bnk",
@@ -508,6 +508,6 @@
     ]
    }
   ],
-  "FileHash": "{5982D547-1581-64AD-384A-328C7986F7AB}"
+  "FileHash": "{694A8853-B2F9-E1D5-1FD3-BCB92A86A9C9}"
  }
 }

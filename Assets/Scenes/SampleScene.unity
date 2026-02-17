@@ -2512,6 +2512,18 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: b60e71fc95d82044d97fd23768f8df3a, type: 2}
+  stateSlot1:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6a5b0616a2cc202458a3716c2e135a42, type: 2}
+  stateSlot2:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 218442ff0040c4349b39a17bb3f3f71d, type: 2}
   gameManager: {fileID: 166057888}
 --- !u!4 &170908042 stripped
 Transform:
