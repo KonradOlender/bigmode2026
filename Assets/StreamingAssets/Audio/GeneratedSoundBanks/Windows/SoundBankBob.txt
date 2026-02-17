@@ -32,32 +32,39 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2486342905	TimeLeft			\Default Work Unit\TimeLeft	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	393239870	SFX			\Default Work Unit\Master Audio Bus\EnvSFX\SFX	
+	1794843847	EnvSFX			\Default Work Unit\Master Audio Bus\EnvSFX	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	1978845350	EnvSfxrev			\Default Work Unit\Master Audio Bus\EnvSFX\EnvSfxrev	
+
+Effect plug-ins	ID	Name	Type				Notes
+	602546716	Room_Large	Wwise RoomVerb			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	6252285	Music	.cache\3C\{3C22E61C-B2AD-5F25-4B88-3F75594D8D7B}.wem		\Containers\Default Work Unit\Music		15631852
-	79073991	Checkpoint	.cache\EF\{EFA5E326-0B3F-27F3-AD83-F68AE058E55A}.wem		\Containers\Default Work Unit\SFX\Checkpoint		318072
+	79073991	Checkpoint	.cache\EF\{EFA5E326-0B3F-27F3-AD83-F68AE058E55A}.wem		\Containers\Default Work Unit\SFX\nonEnv\Checkpoint		318072
 	101389195	Riser	.cache\7A\{7AA8C77F-9D7C-A7B1-95C6-4BDF8D39A4DC}.wem		\Containers\Default Work Unit\Riser		1985544
-	148056745	TIME	.cache\B4\{B4250DC6-6F58-608A-B713-8443B68F21EE}.wem		\Containers\Default Work Unit\TIME		361020
+	148056745	TIME	.cache\B4\{B4250DC6-6F58-608A-B713-8443B68F21EE}.wem		\Containers\Default Work Unit\SFX\nonEnv\TIME		361020
 	186246000	Ambient_Loop	.cache\EC\{ECA4AFD4-2599-A65C-CB6B-4F0F8923310B}.wem		\Containers\Default Work Unit\Bobsleigh_Move\Ambient_Loop		2744012
-	234400434	RiserDrop	.cache\D1\{D1C726DF-DB21-F450-2492-48A3EB41D0D8}.wem		\Containers\Default Work Unit\SFX\RiserDrop		610784
+	234400434	RiserDrop	.cache\D1\{D1C726DF-DB21-F450-2492-48A3EB41D0D8}.wem		\Containers\Default Work Unit\SFX\nonEnv\RiserDrop		610784
 	321706249	Fall	.cache\BE\{BE257C85-A71D-E7C4-C5F5-69049DD4CCA2}.wem		\Containers\Default Work Unit\Fall		120984
 	351980496	Jump_In	.cache\87\{87DA6E31-EBDE-8FF4-8D3A-358B1F89183C}.wem		\Containers\Default Work Unit\Jump_In		112936
 	407263779	Step2	.cache\7D\{7DECA80F-FEEE-6372-7FFC-EAADC9DEC9B2}.wem		\Containers\Default Work Unit\Run\Step2		10914
-	436744132	Lose	.cache\1D\{1DC1572A-A932-7D40-0616-A72D51728F36}.wem		\Containers\Default Work Unit\SFX\Lose		441096
-	537572852	RideSound1B	.cache\D1\{D101B2C5-7CEE-08EE-55C9-0F9B19EED14A}.wem		\Containers\Default Work Unit\Drive\RideSound1B		1825148
-	702913062	Speedup	.cache\53\{53F34A4C-CCAE-4BD5-54B1-FE388436BAE7}.wem		\Containers\Default Work Unit\SFX\Speedup		271484
+	436744132	Lose	.cache\1D\{1DC1572A-A932-7D40-0616-A72D51728F36}.wem		\Containers\Default Work Unit\SFX\nonEnv\Lose		441096
+	537572852	RideSound1B	.cache\D1\{D101B2C5-7CEE-08EE-55C9-0F9B19EED14A}.wem		\Containers\Default Work Unit\SFX\Env\Drive\RideSound1B		1825148
+	702913062	Speedup	.cache\53\{53F34A4C-CCAE-4BD5-54B1-FE388436BAE7}.wem		\Containers\Default Work Unit\SFX\nonEnv\Speedup		271484
 	734714370	Step4	.cache\C1\{C1AB5717-4D6F-1B0C-5B0A-BE868DBAC6D8}.wem		\Containers\Default Work Unit\Run\Step4		7148
-	833998127	Meta	.cache\52\{52F3973E-F9EC-5ABD-C45D-4192EF2688A5}.wem		\Containers\Default Work Unit\Meta		1587696
-	834813033	risernew	.cache\63\{631E1924-1580-1FE1-2D77-13F92585FF4F}.wem		\Containers\Default Work Unit\risernew		702080
-	897386478	Penguin_Slice	.cache\E8\{E8E06E29-F2A3-D6B1-2F10-CE2EC7F3EFA7}.wem		\Containers\Default Work Unit\SFX\Penguin_Slice		175704
-	902394561	Band_Hit	.cache\F7\{F724E6AC-390D-AC49-721E-D234D7174C32}.wem		\Containers\Default Work Unit\Band_Hit		161056
+	833998127	Meta	.cache\52\{52F3973E-F9EC-5ABD-C45D-4192EF2688A5}.wem		\Containers\Default Work Unit\SFX\nonEnv\Meta		1587696
+	834813033	risernew	.cache\63\{631E1924-1580-1FE1-2D77-13F92585FF4F}.wem		\Containers\Default Work Unit\SFX\nonEnv\risernew		702080
+	897386478	Penguin_Slice	.cache\E8\{E8E06E29-F2A3-D6B1-2F10-CE2EC7F3EFA7}.wem		\Containers\Default Work Unit\SFX\Env\Penguin_Slice		175704
+	902394561	Band_Hit	.cache\F7\{F724E6AC-390D-AC49-721E-D234D7174C32}.wem		\Containers\Default Work Unit\SFX\Env\Band_Hit		161056
 	910831133	Step1	.cache\2B\{2BF5FB04-3BA2-3164-23BD-8FA341FFDD30}.wem		\Containers\Default Work Unit\Run\Step1		15344
-	914134723	penguintalk	.cache\44\{44C8FBC8-5B70-7962-0180-FF54D118CF24}.wem		\Containers\Default Work Unit\penguintalk		1664044
-	947742990	Jump	.cache\4B\{4B7EB6D8-A1DC-6FBC-D91F-B9A0DEAEC341}.wem		\Containers\Default Work Unit\Drive\Jump		116948
-	953002080	JumpWoosh	.cache\39\{39A43AC3-B073-A5B3-7691-93E618FA32DE}.wem		\Containers\Default Work Unit\Drive\JumpWoosh		123808
+	914134723	penguintalk	.cache\44\{44C8FBC8-5B70-7962-0180-FF54D118CF24}.wem		\Containers\Default Work Unit\SFX\Env\penguintalk		1664044
+	947742990	Jump	.cache\4B\{4B7EB6D8-A1DC-6FBC-D91F-B9A0DEAEC341}.wem		\Containers\Default Work Unit\SFX\Env\Drive\Jump		116948
+	953002080	JumpWoosh	.cache\39\{39A43AC3-B073-A5B3-7691-93E618FA32DE}.wem		\Containers\Default Work Unit\SFX\Env\Drive\JumpWoosh		123808
 	983774758	Step3	.cache\2E\{2E08C39C-7767-B545-4B94-27AC0DAA00BD}.wem		\Containers\Default Work Unit\Run\Step3		19484
 	1029221817	Wind_Noise_Loop	.cache\64\{64E34E96-0298-D385-E6B6-694C903D0393}.wem		\Containers\Default Work Unit\Bobsleigh_Move\Wind_Noise_Loop		1635312
 

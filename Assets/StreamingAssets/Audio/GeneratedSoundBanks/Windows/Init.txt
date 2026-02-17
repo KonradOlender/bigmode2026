@@ -7,9 +7,16 @@ State	ID	Name	State Group			Notes
 	1651971902	ON	OnScreen			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	393239870	SFX			\Default Work Unit\Master Audio Bus\EnvSFX\SFX	
+	1794843847	EnvSFX			\Default Work Unit\Master Audio Bus\EnvSFX	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	1978845350	EnvSfxrev			\Default Work Unit\Master Audio Bus\EnvSFX\EnvSfxrev	
+
+Effect plug-ins	ID	Name	Type				Notes
+	602546716	Room_Large	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1849CB0D-7D65-4F74-A1DE-596E9AA02142}",
     "Language": "SFX",
-    "Hash": "{4E544C8C-6ECB-B0E4-BE1A-0EFD3410D7EF}",
+    "Hash": "{ABF10E83-D587-1556-D52C-EA5BF61FDFA2}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SoundBankBob",
     "ShortName": "SoundBankBob",
     "Path": "SoundBankBob.bnk",
@@ -200,6 +200,18 @@
       "CachePath": "64/{64E34E96-0298-D385-E6B6-694C903D0393}.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "602546716",
+       "Name": "Room_Large",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Large",
+       "GUID": "{AD8EFAFC-7121-4D5F-BE4D-B13FBD6CEBAE}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1570834349",
@@ -476,8 +488,30 @@
      {
       "Id": "393239870",
       "Name": "SFX",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Master Audio Bus\\SFX",
-      "GUID": "{08D76077-9E85-4F47-90CF-55AFCAB9BBA9}"
+      "ObjectPath": "\\Busses\\Default Work Unit\\Master Audio Bus\\EnvSFX\\SFX",
+      "GUID": "{08D76077-9E85-4F47-90CF-55AFCAB9BBA9}",
+      "AuxBusRefs": [
+       {
+        "Id": "1978845350",
+        "Name": "EnvSfxrev",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Master Audio Bus\\EnvSFX\\EnvSfxrev",
+        "GUID": "{3515CAC9-1CFF-4FE1-B470-F2D4544E4E0B}"
+       }
+      ]
+     },
+     {
+      "Id": "1794843847",
+      "Name": "EnvSFX",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Master Audio Bus\\EnvSFX",
+      "GUID": "{6B1842D6-A468-4DE9-B77D-696DEDCAE7A1}",
+      "AuxBusRefs": [
+       {
+        "Id": "1978845350",
+        "Name": "EnvSfxrev",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Master Audio Bus\\EnvSFX\\EnvSfxrev",
+        "GUID": "{3515CAC9-1CFF-4FE1-B470-F2D4544E4E0B}"
+       }
+      ]
      },
      {
       "Id": "3803692087",
@@ -490,6 +524,21 @@
       "Name": "Music",
       "ObjectPath": "\\Busses\\Default Work Unit\\Master Audio Bus\\Music",
       "GUID": "{A055546D-2C4A-4309-8360-506C6DB010E9}"
+     }
+    ],
+    "AuxBusses": [
+     {
+      "Id": "1978845350",
+      "Name": "EnvSfxrev",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Master Audio Bus\\EnvSFX\\EnvSfxrev",
+      "GUID": "{3515CAC9-1CFF-4FE1-B470-F2D4544E4E0B}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "602546716"
+        }
+       ]
+      }
      }
     ],
     "GameParameters": [
@@ -508,6 +557,6 @@
     ]
    }
   ],
-  "FileHash": "{694A8853-B2F9-E1D5-1FD3-BCB92A86A9C9}"
+  "FileHash": "{C2404506-922F-C6D5-F670-C53CE2E88BD7}"
  }
 }

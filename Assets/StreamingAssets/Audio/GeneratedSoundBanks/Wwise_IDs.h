@@ -74,10 +74,16 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID ENVSFX = 1794843847U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID ENVSFXREV = 1978845350U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {
