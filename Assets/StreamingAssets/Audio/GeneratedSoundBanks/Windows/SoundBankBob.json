@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1849CB0D-7D65-4F74-A1DE-596E9AA02142}",
     "Language": "SFX",
-    "Hash": "{FCA0AB67-A10C-4E55-C0A9-C2524B631405}",
+    "Hash": "{17B5A08A-AB7C-7A24-49A8-7EDF2F09A722}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SoundBankBob",
     "ShortName": "SoundBankBob",
     "Path": "SoundBankBob.bnk",
@@ -45,7 +45,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "TIME.wav",
-      "CachePath": "C0/{C0A4F203-E89A-F9F2-48BA-4B0E01A03156}.wem"
+      "CachePath": "B4/{B4250DC6-6F58-608A-B713-8443B68F21EE}.wem"
      },
      {
       "Id": "186246000",
@@ -101,7 +101,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "RideSound1B.wav",
-      "CachePath": "0C/{0C96C196-4029-1CED-6D13-F38CF3AF39CB}.wem"
+      "CachePath": "D1/{D101B2C5-7CEE-08EE-55C9-0F9B19EED14A}.wem"
      },
      {
       "Id": "702913062",
@@ -149,7 +149,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "band_hit.wav",
-      "CachePath": "BB/{BB2B22AE-B73A-33D5-BF40-BAF7F7112DEB}.wem"
+      "CachePath": "F7/{F724E6AC-390D-AC49-721E-D234D7174C32}.wem"
      },
      {
       "Id": "910831133",
@@ -173,7 +173,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Turn.wav",
-      "CachePath": "DB/{DB2E85FA-D08F-95AE-3F6E-514FBCA76E5C}.wem"
+      "CachePath": "4B/{4B7EB6D8-A1DC-6FBC-D91F-B9A0DEAEC341}.wem"
      },
      {
       "Id": "953002080",
@@ -181,7 +181,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Swooshes, Whoosh, Classic, Normal SND55544.wav",
-      "CachePath": "9D/{9DA5E86C-824B-6593-711E-3BF300AF9E74}.wem"
+      "CachePath": "39/{39A43AC3-B073-A5B3-7691-93E618FA32DE}.wem"
      },
      {
       "Id": "983774758",
@@ -508,6 +508,6 @@
     ]
    }
   ],
-  "FileHash": "{7375878B-F601-4069-72BB-E2B43E18CCB5}"
+  "FileHash": "{5982D547-1581-64AD-384A-328C7986F7AB}"
  }
 }

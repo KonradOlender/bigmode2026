@@ -7,6 +7,9 @@ public class TimeLeft : MonoBehaviour
     public AK.Wwise.Event timeLeftEvent; // Event to play the time left sound
     public RTPC timeLeftRTPC; // RTPC to control the remaining time parameter
 
+    [Header("Dependencies")]
+    public Gamemanager gameManager; // Reference to the GameManager
+
     private void Start()
     {
         if (timeLeftEvent != null)
@@ -17,11 +20,11 @@ public class TimeLeft : MonoBehaviour
 
     private void Update()
     {
-        if (timeLeftRTPC != null)
+        if (timeLeftEvent != null && gameManager != null)
         {
-            // Example RTPC value update logic
-            float rtpcValue = Mathf.Clamp(Time.time, 0, 30); // Replace Time.time with actual value
-            timeLeftRTPC.SetValue(gameObject, rtpcValue);
+            // Dynamically adjust the event value based on current time
+            float currentTime = gameManager.currentTime;
+            timeLeftRTPC.SetValue(gameObject, currentTime);
         }
     }
 }
