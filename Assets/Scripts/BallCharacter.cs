@@ -15,6 +15,7 @@ public class BallCharacter : MonoBehaviour
     [Header("Camera Reference")]
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private Camera camera;
+    [SerializeField] private bool FOVChangeEnable;
     [SerializeField] float minFOV;
     [SerializeField] float maxFOV;
     
@@ -29,6 +30,10 @@ public class BallCharacter : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] public float isBoostingCooldown;
 
+    [Header("Gravity")]
+    [SerializeField] public float groundedGravity = 1f;
+    [SerializeField] public float airGravity = 20f;
+
     private Rigidbody rb;
     private Vector2 moveInput;
     private bool isGrounded = false;
@@ -37,9 +42,48 @@ public class BallCharacter : MonoBehaviour
 
     private string currentAnim = "";
 
+    private Vector3 contactPoint;
+    private Vector3 contactNormal;
+
+    private SphereCollider sphere;
+    private Vector3 sphereCenter;
+    private Vector3 radiusDirection;
+
+    private Vector3 down;
+    private Vector3 up;
+    private Vector3 right;
+    private Vector3 forward;
+
+    private Vector3 forwardRight;
+    private Vector3 forwardLeft;
+    private Vector3 backRight;
+    private Vector3 backLeft;
+
+    private Vector3 tangent;
+    private Vector3 mytarget;
+
+
+    private void OnCollisionStay(Collision collision)
+    {
+        ContactPoint contact = collision.GetContact(0);
+
+        contactPoint = contact.point;
+
+        //Debug.Log(contact.point);
+        //Debug.Log(contact.normal);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = isGrounded ? Color.green : Color.red;
+        Gizmos.DrawWireSphere(transform.position, groundCheckDistance);
+    }
+
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        sphere = GetComponent<SphereCollider>();
 
         playerInControl = true;
 
@@ -65,17 +109,26 @@ public class BallCharacter : MonoBehaviour
     {
         Anims();
         ApplyMovement();
+        ApplyGravity();
     }
-    
-    private void CheckGroundStatus()
-    {
-        //isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance, groundLayer);
 
+    private void ApplyGravity()
+    {
+        rb.useGravity = false;
+
+        float gravity = isGrounded ? groundedGravity : airGravity;
+
+        rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
+    }
+
+    
+
+    private void CheckGroundStatus()
+    {        
         wasGrounded = isGrounded;
 
-        isGrounded = Physics.Raycast(
+        isGrounded = Physics.CheckSphere(
             transform.position,
-            Vector3.down,
             groundCheckDistance,
             groundLayer
         );
@@ -84,6 +137,21 @@ public class BallCharacter : MonoBehaviour
         {
             OnGroundedChanged(isGrounded);
         }
+
+        sphereCenter = transform.TransformPoint(sphere.center);
+        radiusDirection = (contactPoint - sphereCenter).normalized;
+        down = radiusDirection;
+
+        right = Vector3.Cross(down, cameraTransform.forward).normalized;
+
+        // od œrodka kuli
+        float length = 2f;
+        Debug.DrawRay(sphereCenter, cameraTransform.forward * length, Color.blue);
+        Debug.DrawRay(sphereCenter, radiusDirection * length, Color.green);
+        Debug.DrawRay(sphereCenter, right * length, Color.red);
+
+        DrawPoint(contactPoint, 0.1f, Color.red);
+        DrawPoint(sphereCenter, 0.1f, Color.red);
     }
 
     public void OnGroundedChanged(bool grounded)
@@ -94,16 +162,23 @@ public class BallCharacter : MonoBehaviour
         }
         else if (!grounded)
         {
+            Debug.Log("lose contact with ground");
             Soundmanager.Instance.RideEndPlay();
             Soundmanager.Instance.RideSoundStop();
         }
     }
 
+    public static void DrawPoint(Vector3 position, float size, Color color)
+    {
+        Debug.DrawLine(position - Vector3.right * size, position + Vector3.right * size, color);
+        Debug.DrawLine(position - Vector3.up * size, position + Vector3.up * size, color);
+        Debug.DrawLine(position - Vector3.forward * size, position + Vector3.forward * size, color);
+    }
 
     private void ApplyMovement()
     {
         if (cameraTransform == null) return;
-        
+
         Vector3 cameraForward = cameraTransform.forward;
         Vector3 cameraRight = cameraTransform.right;
         
@@ -112,14 +187,12 @@ public class BallCharacter : MonoBehaviour
         cameraForward.Normalize();
         cameraRight.Normalize();
 
-        gamemanager.setSpeedText(rb.linearVelocity.magnitude);
         //Debug.Log(rb.linearVelocity.magnitude);
         //Debug.Log(rb.linearVelocity);
 
-        Vector3 moveDirection = cameraRight * moveInput.x;
-        //cameraForward * moveInput.y +
+        Vector3 moveDirection = moveInput.x * cameraRight;
 
-        if(camera.fieldOfView >= minFOV && camera.fieldOfView <= maxFOV)
+        if(camera.fieldOfView >= minFOV && camera.fieldOfView <= maxFOV && FOVChangeEnable)
         {
             camera.fieldOfView = 60 + rb.linearVelocity.magnitude;
         }
@@ -129,6 +202,9 @@ public class BallCharacter : MonoBehaviour
         {
             rb.AddForce(moveDirection * moveForce, ForceMode.Force);
         }
+
+        //GUI
+        gamemanager.setSpeedText(rb.linearVelocity.magnitude);
     }
     
     public void OnMove(InputAction.CallbackContext context)
