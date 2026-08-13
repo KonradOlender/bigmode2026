@@ -115,7 +115,7 @@ public class Follow : MonoBehaviour
     private void RotateToVelocity()
     {
         Vector3 velocity = targetRigidbody.linearVelocity;
-        velocity.y = 0f;
+        //velocity.y = 0f;
 
         if (velocity.sqrMagnitude > minimumVelocityThreshold * minimumVelocityThreshold)
         {
